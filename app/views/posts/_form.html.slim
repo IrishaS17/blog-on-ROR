@@ -1,18 +1,28 @@
+= if @post.errors.any?
+    .alert.alert-danger
+      h5 = t('common.errors')
+      ul
+        = @post.errors.full_messages.each do |message|
+         li = message
 = form_for @post do |p|
-  .form_control
-     = p.label :title
-     = p.text_field :title
+  .form-group
+    = p.label :title
+    .form_control
+      = p.text_field :title
 
-  .form_control
+  .form-group
   	= p.label :preview 
-  	= p.text_area :preview 
-
-  .form_control
+    .form_control
+  	  = p.text_area :preview
+  .form-group
   	= p.label :body 
-  	= p.text_area :body
-  
-  .form_control
-  	= p.submit 'Сохранить'
+    .form_control
+  	  = p.text_area :body
+
+  .form-group
+  	button.btn.btn-primary type="submit" Сохранить
+    /a.btn.btn-outline-primary.pull-xs-right href=" :back" 
+    = link_to "Назад", :back
   
 
  

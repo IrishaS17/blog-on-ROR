@@ -1,0 +1,32 @@
+html
+  head
+    title Irish Blog
+    = csrf_meta_tags 
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+
+  body
+    header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md.navbar-light.bg-faded
+      nav.container
+        a.navbar-brand href="#" IrishBlog
+        div.collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link href="/posts" Лента
+              span.sr-only (current)
+           
+            li.nav-item
+              a.nav-link href="/posts" Подписки
+            
+            li.nav-item
+              a.nav-link.disabled href="#" Disabled
+           
+
+          a.btn.btn-outline-primary.pull-xs-right href="/posts/new" Написать 
+          a.btn.btn-outline-primary.pull-xs-right href="#" Вход\Регистрация
+           
+       
+    div.container.main   
+      == yield 
+      

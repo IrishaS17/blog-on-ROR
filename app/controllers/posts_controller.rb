@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
   
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+ 
   def index
     @posts = Post.all
   end
 
   def create
-  	p params
-	@post = Post.new(post_params) #стронг параметрс - фильтрация параметров, которые мы получаем
+	  @post = Post.new(post_params) #стронг параметрс - фильтрация параметров, которые мы получаем
   	if @post.save
   		redirect_to @post #если сохранилось перенаправляем на созданный пост
   	else
@@ -17,7 +17,6 @@ class PostsController < ApplicationController
 
   def new
   	@post = Post.new
-  	
   end
 
   def edit

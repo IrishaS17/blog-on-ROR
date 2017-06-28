@@ -1,6 +1,14 @@
-h2 Список постов:
-= link_to 'Изменить', edit_post_path(@post)
-br
-= link_to 'Удалить',post_path(@post), method: :delete, data: {confirm: 'Вы уверены?' }
-h2 = @post.title
-p = @post.body
+article.post
+  section.post-head
+    h2 = @post.title
+    small
+      time = @post.created_at.to_date.strftime("%d, %B, %Y")
+      ' | 
+      =link_to 'Редактировать', edit_post_path(@post)
+      ' | 
+      =link_to 'Удалить', post_path(@post), method: :delete, data: {conform: "Вы уверены?"}
+  section.post-body
+    = @post.preview
+   
+
+
