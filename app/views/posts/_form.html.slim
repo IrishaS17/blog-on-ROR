@@ -1,9 +1,10 @@
-= if @post.errors.any?
-    .alert.alert-danger
-      h5 = t('common.errors')
-      ul
-        = @post.errors.full_messages.each do |message|
-         li = message
+-if @post.errors.any?
+  .alert.alert-danger
+    h5 = t('common.errors')
+    ul
+      = @post.errors.full_messages.each do |message|
+       li = message
+
 = form_for @post do |p|
   .form-group
     = p.label :title
@@ -21,8 +22,4 @@
 
   .form-group
   	button.btn.btn-primary type="submit" Сохранить
-    /a.btn.btn-outline-primary.pull-xs-right href=" :back" 
-    = link_to "Назад", :back
-  
-
- 
+    =link_to "Назад", :back
