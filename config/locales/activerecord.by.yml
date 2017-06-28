@@ -1,0 +1,12 @@
+by:
+  activerecord:
+    models:
+      post: 'Артыкул'
+    attributes: 
+      post:
+        title: 'Назва'
+        preview: 'Кароткі змест'
+        body: 'Змест'
+  errors:
+    messages: 
+      blank: 'не можа быть пустым'

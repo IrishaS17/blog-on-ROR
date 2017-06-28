@@ -1,0 +1,15 @@
+by:
+  
+  common:
+    errors: 'Адбылася памылка'
+    back: 'Назад'
+  posts:
+    index:
+      title: 'Артыкулы'
+    new:
+      title: 'Новы артыкул'
+    edit: 
+      title: 'Змяненне артыкула'
+    forms:
+      submit: 
+        'Ок'

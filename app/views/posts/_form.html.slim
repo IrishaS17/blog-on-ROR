@@ -2,7 +2,7 @@
   .alert.alert-danger
     h5 = t('common.errors')
     ul
-      = @post.errors.full_messages.each do |message|
+      - @post.errors.full_messages.each do |message|
        li = message
 
 = form_for @post do |p|
@@ -21,5 +21,6 @@
   	  = p.text_area :body
 
   .form-group
-  	button.btn.btn-primary type="submit" Сохранить
-    =link_to "Назад", :back
+  	input.btn.btn-primary type="submit" value = t('posts.forms.submit') 
+    /t('.submit', action: @post.new.record? ? 'Стварыць' : 'Змянiць') 
+    =link_to t('common.back'), :back
