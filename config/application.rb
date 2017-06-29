@@ -16,9 +16,9 @@ module A
     # -- all .rb files in that directory are automatically loaded.
     I18n.available_locales = [:en, :by, :ru]
     config.time_zone = 'Minsk'
-    config.i18n.default_locale = :en
-    def default_url_options(options = {}) 
-    	{ locale: I18n.locale }.merge options 
+    config.i18n.default_locale = :by
+    def default_url_options
+    	{ locale: I18n.locale } 
     end
   end
 end

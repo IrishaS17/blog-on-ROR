@@ -2,31 +2,34 @@ html
   head
     title Irish Blog
     = csrf_meta_tags 
-
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
     header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md.navbar-light.bg-faded
       nav.container
         a.navbar-brand href="/posts" IrishBlog
-        div.collapse.navbar-collapse#navbarSupportedContent
+        div.collapse.navbar-collapse id="navbarNavDropdown"
           ul.navbar-nav.mr-auto
             li.nav-item.active
               a.nav-link href="/posts" Лента
               span.sr-only (current)
-           
             li.nav-item
               a.nav-link href="/posts" Подписки
-            
             li.nav-item
               a.nav-link.disabled href="#" Disabled
-           
-
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" Languege
+              ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
+                li.dropdown-item =link_to 'Belarusian', locale: "by"
+                li.dropdown-item =link_to 'Russian', locale: "ru"
+                li.dropdown-item =link_to 'English', locale: "en"
           a.btn.btn-outline-primary.pull-xs-right href="/posts/new" Написать 
           a.btn.btn-outline-primary.pull-xs-right href="#" Вход\Регистрация
-           
-       
+                 
     div.container.main   
-      == yield 
+      =yield 
+
+
       
