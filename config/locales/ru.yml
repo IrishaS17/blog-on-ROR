@@ -1,7 +1,18 @@
 ru:
+  layouts:
+    application: 
+      news: 'Лента'
+      followers: 'Подписки'
+      write: 'Написать'
+      language: 'Язык'
+      registration: 'Регистрация'
+      sign_in: 'Вход'  
   common:
     errors: 'Произошла ошибка'
+    success: 'Сатья сохранена'
     back: 'Назад'
+    edit: 'Изменить'
+    delete: 'Удалить'
   posts:
     index:
       title: 'Сатьи'
@@ -10,5 +21,4 @@ ru:
     edit: 
       title: 'Редактирование сатьи'
     forms:
-      submit: 
-        'Ок'
+      submit: 'Сохранить'

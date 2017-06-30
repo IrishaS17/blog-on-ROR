@@ -30,9 +30,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    application:
+      news: 'News'
+      followers: 'Followers'
+      write: 'New Post' 
+      language: 'Language' 
+      registration: 'Registration'
+      sign_in: 'Sign in'
   common:
     errors: 'Errors'
+    success: 'Post saved'
     back: 'Back'
+    edit: 'Edit'
+    delete: 'Delete'
   posts:
     index:
       title: 'Posts'
@@ -41,5 +52,4 @@ en:
     edit: 
       title: 'Edit post'
     forms:
-      submit: 
-        'Ok'
+      submit: 'Save'

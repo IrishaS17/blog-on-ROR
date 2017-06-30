@@ -13,20 +13,22 @@ html
         div.collapse.navbar-collapse id="navbarNavDropdown"
           ul.navbar-nav.mr-auto
             li.nav-item.active
-              a.nav-link href="/posts" Лента
+              a.nav-link href="/posts" =t('.news')
               span.sr-only (current)
             li.nav-item
-              a.nav-link href="/posts" Подписки
+              a.nav-link href="/posts" =t('.followers')
             li.nav-item
               a.nav-link.disabled href="#" Disabled
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" Languege
+              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =t('.language')
               ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
-                li.dropdown-item =link_to 'Belarusian', locale: "by"
-                li.dropdown-item =link_to 'Russian', locale: "ru"
+                li.dropdown-item =link_to 'Беларуская', locale: "by"
+                li.dropdown-item =link_to 'Русский', locale: "ru"
                 li.dropdown-item =link_to 'English', locale: "en"
-          a.btn.btn-outline-primary.pull-xs-right href="/posts/new" Написать 
-          a.btn.btn-outline-primary.pull-xs-right href="#" Вход\Регистрация
+          a.btn.btn-outline-primary.pull-xs-right href="/posts/new" =t('.write') 
+          a.btn.btn-outline-primary.pull-xs-right href="#" 
+            img src="/assets/images/menu/login.png"
+          a.btn.btn-outline-primary.pull-xs-right href="#" =t('.registration') 
                  
     div.container.main   
       =yield 

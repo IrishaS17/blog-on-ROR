@@ -7,6 +7,7 @@ ru:
         title: 'Название'
         preview: 'Короткая статья'
         body: 'Содержание'
+        image: 'Загрузите файл'
   errors:
     messages: 
       blank: 'не может быть пустым'
