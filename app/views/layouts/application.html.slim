@@ -9,14 +9,14 @@ html
   body
     header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md.navbar-light.bg-faded
       nav.container
-        a.navbar-brand href="/posts" IrishBlog
+        =link_to 'IrishBlog', posts_path, {:class=>"navbar-brand"}
         div.collapse.navbar-collapse id="navbarNavDropdown"
           ul.navbar-nav.mr-auto
             li.nav-item.active
-              a.nav-link href="/posts" =t('.news')
+              =link_to t('.news'), posts_path, {:class=>"nav-link"}
               span.sr-only (current)
             li.nav-item
-              a.nav-link href="/posts" =t('.followers')
+              =link_to t('.followers'), posts_path, {:class=>"nav-link"}
             li.nav-item
               a.nav-link.disabled href="#" Disabled
             li.nav-item.dropdown
@@ -25,10 +25,10 @@ html
                 li.dropdown-item =link_to 'Беларуская', locale: "by"
                 li.dropdown-item =link_to 'Русский', locale: "ru"
                 li.dropdown-item =link_to 'English', locale: "en"
-          a.btn.btn-outline-primary.pull-xs-right href="/posts/new" =t('.write') 
+          =link_to t('.write'), posts_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
           a.btn.btn-outline-primary.pull-xs-right href="#" 
-            img src="/assets/images/menu/login.png"
-          a.btn.btn-outline-primary.pull-xs-right href="#" =t('.registration') 
+            img 
+          =link_to t('.registration'), posts_path, {:class=>"btn btn-outline-primary pul-xs-right"}
                  
     div.container.main   
       =yield 

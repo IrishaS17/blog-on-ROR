@@ -8,17 +8,13 @@
 = form_for @post, html: {multipart: true} do |p|
   .form-group
     = p.label :title
-    .form_control
-      = p.text_field :title
-
+    = p.text_field :title, {:class => "form-control"}
   .form-group
   	= p.label :preview 
-    .form_control
-  	  = p.text_area :preview
+    = p.text_area :preview, {:class => "form-control"}
   .form-group
   	= p.label :body 
-    .form_control
-  	  = p.text_area :body
+  	= p.text_area :body, {:class => "form-control"}
   .form-group
     = p.label :image
     br
@@ -27,4 +23,4 @@
   .form-group
   	input.btn.btn-primary type="submit" value = t('posts.forms.submit') 
     /t('.submit', action: @post.new.record? ? 'Стварыць' : 'Змянiць') 
-    =link_to t('common.back'), :back
+    =link_to t('common.back'), :back, { :class=>"btn btn-back" } 
