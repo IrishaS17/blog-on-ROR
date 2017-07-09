@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     root 'posts#index'
     resources :posts
     resources :users
+    resources :pictures, only: [:create, :destroy]
+    resources :tags, only: [:show]
   end
 =begin  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 	  root 'posts#index'

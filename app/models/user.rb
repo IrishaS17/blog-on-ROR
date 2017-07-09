@@ -9,8 +9,7 @@ class User < ApplicationRecord
 	#after_destroy {category.inc(:user_count, -1)}
 	def ensure_login_has_a_value
       if name.nil?
-        self.name = email unless email.blank?
-        puts "----------------------"
+        self.name = email if email.present? && name.blank?
       end
     end
 end

@@ -8,6 +8,7 @@ ru:
         preview: 'Короткая статья'
         body: 'Содержание'
         image: 'Загрузите файл'
+        all_tags: 'Тэги'
   errors:
     messages: 
       blank: 'не может быть пустым'

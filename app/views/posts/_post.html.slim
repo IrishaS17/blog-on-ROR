@@ -8,6 +8,7 @@
           ' | 
           =link_to t('common.delete'), post_path(post), method: :delete, data: {conform: "Вы уверены?"}
       section.post-preview.clearfix
-          = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
-          = post.preview
-   
+        = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
+        = post.preview
+      section.post-tags
+        = raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ')    

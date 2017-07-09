@@ -8,6 +8,7 @@ by:
         preview: 'Кароткі змест'
         body: 'Змест'
         image: 'Загрузіце файл'
+        all_tags: 'Тэгi'
   errors:
     messages: 
       blank: 'не можа быть пустым'

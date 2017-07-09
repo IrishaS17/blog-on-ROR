@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.1'
 gem 'sqlite3'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'trix'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'slim'

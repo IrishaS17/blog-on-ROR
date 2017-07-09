@@ -30,8 +30,11 @@ html
             img 
           =link_to t('.registration'), posts_path, {:class=>"btn btn-outline-primary pul-xs-right"}
                  
-    div.container.main   
-      =yield 
-
-
-      
+    div.container.main
+      div.row
+        div.col-md-8
+          =yield 
+        div.col-md-4
+          /tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class|
+            =link_to tag.name, tag_path(tag.name), class: css_class
+          
