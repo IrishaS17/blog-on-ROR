@@ -13,6 +13,9 @@ by:
     back: 'Назад'
     edit: 'Змянiць'
     delete: 'Удалiць'
+  will_paginate:
+    previous_label: '&larr; Назад '
+    next_label: 'Далей &rarr;'
   posts:
     index:
       title: 'Артыкулы'

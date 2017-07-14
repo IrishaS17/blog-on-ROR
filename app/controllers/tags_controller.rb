@@ -4,5 +4,6 @@ class TagsController < ApplicationController
     @posts = @tag.posts #получаем все посты в этим тэгом
   end
 
+  
  
 end

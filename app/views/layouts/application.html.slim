@@ -25,16 +25,19 @@ html
                 li.dropdown-item =link_to 'Беларуская', locale: "by"
                 li.dropdown-item =link_to 'Русский', locale: "ru"
                 li.dropdown-item =link_to 'English', locale: "en"
-          =link_to t('.write'), posts_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
+          =link_to t('.write'), new_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
           a.btn.btn-outline-primary.pull-xs-right href="#" 
             img 
           =link_to t('.registration'), posts_path, {:class=>"btn btn-outline-primary pul-xs-right"}
                  
     div.container.main
       div.row
-        div.col-md-8
+        div.col-md-9
           =yield 
-        div.col-md-4
-          /tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class|
-            =link_to tag.name, tag_path(tag.name), class: css_class
-          
+        div.col-md-3
+          div#tag_cloud
+            tag_cloud Tag.tag_counts, %w[xs s m l xl] do |tag, css_class|
+              = link_to tag.name, tag_path(tag.name), class: css_class 
+            /tag_cloud Tag.counts, %w[xs s m l xl] do |tag, css_class| 
+              link_to tag.name, tag_path(tag.name), class: css_class
+              

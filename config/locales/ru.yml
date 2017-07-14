@@ -13,6 +13,9 @@ ru:
     back: 'Назад'
     edit: 'Изменить'
     delete: 'Удалить'
+  will_paginate:
+    previous_label: '&larr; Назад '
+    next_label: 'Далее &rarr;'
   posts:
     index:
       title: 'Сатьи'
