@@ -1,10 +1,11 @@
 class Post < ApplicationRecord
-  validates :title, :body, presence: true
+  validates :title, :body, :preview, presence: true
   mount_uploader :image, ImageUploader
 
   has_many :taggings
   has_many :tags, through: :taggings
-	
+	belongs_to :category
+
   def all_tags
     tags.map(&:name).join(', ') # tags.map(&:name.to_proc).join(', ')блок метода 
   end

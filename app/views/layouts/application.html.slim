@@ -5,10 +5,28 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
     script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
+    javascript:
+      window.onload = function() {
+        try {
+          var options = {
+            depth: 0.5,
+            textFont: 'Impact,"Arial Black",sans-serif',
+            textColour: null,
+            maxSpeed : 0.05,
+            outlineMethod: 'colour',
+            outlineColour: 'green',
+            shuffleTags:true
+          };
+          TagCanvas.Start('myCanvas', '', options);
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          alert(e);
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
   body
-    header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md.navbar-light.bg-faded
-      nav.container
+    header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
+      div.container
         =link_to 'IrishBlog', posts_path, {:class=>"navbar-brand"}
         div.collapse.navbar-collapse id="navbarNavDropdown"
           ul.navbar-nav.mr-auto
@@ -29,15 +47,19 @@ html
           a.btn.btn-outline-primary.pull-xs-right href="#" 
             img 
           =link_to t('.registration'), posts_path, {:class=>"btn btn-outline-primary pul-xs-right"}
-                 
+                   
     div.container.main
       div.row
         div.col-md-9
           =yield 
         div.col-md-3
-          div#tag_cloud
-            tag_cloud Tag.tag_counts, %w[xs s m l xl] do |tag, css_class|
-              = link_to tag.name, tag_path(tag.name), class: css_class 
-            /tag_cloud Tag.counts, %w[xs s m l xl] do |tag, css_class| 
-              link_to tag.name, tag_path(tag.name), class: css_class
-              
+          h2 =t('.tags_cloud')
+          div#myCanvasContainer
+            canvas#myCanvas width="300" height="300"
+              ul
+                - tag_cloud Tag.counts, %w{xs s m l xl} do |tag, css_class|
+                  li 
+                    =link_to tag.name, tag_path(tag.name), class: css_class 
+       
+         
+            

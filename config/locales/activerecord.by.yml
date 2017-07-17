@@ -9,6 +9,8 @@ by:
         body: 'Змест'
         image: 'Загрузіце файл'
         all_tags: 'Тэгi'
+      category:
+        name: 'Катэгорыя'
   errors:
     messages: 
       blank: 'не можа быть пустым'

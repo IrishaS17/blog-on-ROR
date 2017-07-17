@@ -38,12 +38,15 @@ en:
       language: 'Language' 
       registration: 'Registration'
       sign_in: 'Sign in'
+      tags_cloud: 'Tags cloud'
   common:
     errors: 'Errors'
     success: 'Post saved'
     back: 'Back'
     edit: 'Edit'
     delete: 'Delete'
+    save: 'Save'
+    confirm: 'Are you shure?'
   posts:
     index:
       title: 'Posts'
@@ -51,8 +54,13 @@ en:
       title: 'New post'
     edit: 
       title: 'Edit post'
-    forms:
-      submit: 'Save'
   tags:
     show:
       tag: 'Posts with tag: '
+  categories: 
+    index: 
+      title: 'Categories'
+    new:
+      title: 'New category'
+    edit:
+      title: 'Edit catecgory'

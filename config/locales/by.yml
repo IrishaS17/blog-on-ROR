@@ -7,12 +7,15 @@ by:
       language: 'Мова' 
       registration: 'Рэгiстрацыя'
       sign_in: 'Увайсцi'
+      tags_cloud: 'Воблака тэгаў'
   common:
     errors: 'Адбылася памылка'
     success: 'Артыкул захаваны'
     back: 'Назад'
     edit: 'Змянiць'
     delete: 'Удалiць'
+    save: 'Захаваць'
+    confirm: 'Вы ўпэўнены?'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
@@ -23,8 +26,14 @@ by:
       title: 'Новы артыкул'
     edit: 
       title: 'Змяненне артыкула'
-    forms:
-      submit: 'Захаваць'
   tags:
     show:
       tag: 'Артыкулы з тэгам: '
+  categories: 
+    index: 
+      title: 'Катэгорыi'
+    new:
+      title: 'Новая катэгорыя'
+    edit:
+      title: 'Змяненне катэгорыi'
+    

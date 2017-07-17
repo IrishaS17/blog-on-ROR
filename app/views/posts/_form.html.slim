@@ -4,11 +4,14 @@
     ul
       - @post.errors.full_messages.each do |message|
        li = message
-
 = form_for @post, html: {multipart: true} do |p|
   .form-group
     = p.label :title
     = p.text_field :title, {:class => "form-control"}
+  .form-group
+    = p.label :category_id
+    br
+    = p.collection_select :category_id, Category.all, :id, :name, {:class => "form-control"}
   .form-group
   	= p.label :preview 
     = p.text_area :preview, {:class => "form-control"}
@@ -21,8 +24,7 @@
     = p.file_field :image 
   .form-group
     = p.label :all_tags
-    = p.text_field :all_tags, {:class => "form-control"}
+    = p.text_field :all_tags, 'data-role'=>'tagsinput'
   .form-group
-  	input.btn.btn-primary type="submit" value = t('posts.forms.submit') 
-    /t('.submit', action: @post.new.record? ? 'Стварыць' : 'Змянiць') 
+    input.btn.btn-primary type="submit" value = t('common.save') 
     =link_to t('common.back'), :back, { :class=>"btn btn-back" } 

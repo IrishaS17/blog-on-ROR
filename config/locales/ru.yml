@@ -6,13 +6,16 @@ ru:
       write: 'Написать'
       language: 'Язык'
       registration: 'Регистрация'
-      sign_in: 'Вход'  
+      sign_in: 'Вход' 
+      tags_cloud: 'Облако тэгов' 
   common:
     errors: 'Произошла ошибка'
     success: 'Сатья сохранена'
     back: 'Назад'
     edit: 'Изменить'
     delete: 'Удалить'
+    save: 'Сохранить'
+    confirm: 'Вы действительно хотите удалить пост?'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
@@ -23,8 +26,14 @@ ru:
       title: 'Новая статья'
     edit: 
       title: 'Редактирование сатьи'
-    forms:
-      submit: 'Сохранить'
   tags:
     show:
       tag: 'Статьи с тэгом: '
+  categories: 
+    index: 
+      title: 'Категории'
+    new:
+      title: 'Новая категория'
+    edit:
+      title: 'Редактирование категории'
+    

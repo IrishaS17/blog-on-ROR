@@ -15,7 +15,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'trix'
 gem 'will_paginate'
-
+gem 'font-awesome-sass', '~> 4.7.0'
+gem 'bootstrap-tagsinput-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'slim'

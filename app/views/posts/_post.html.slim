@@ -1,12 +1,24 @@
     article.post
       section.post-head
-        h2 = link_to post.title, post_path(post)
-        small
-          = post.created_at.to_date.strftime("%d, %B, %Y")
-          ' | 
-          =link_to t('common.edit'), edit_post_path(post), {:class=>"pull-xs-right"}
-          ' | 
-          =link_to t('common.delete'), post_path(post), method: :delete, data: {conform: "Вы уверены?"}
+        div.row
+          div.col-md-10
+            h2 = link_to post.title, post_path(post) 
+            small
+             = post.created_at.to_date.strftime("%d, %B, %Y")
+          div.col-md-2.right-block
+            div.btn-group
+              a#dropdownMenuLink data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =icon('ellipsis-h', class: 'fa-2x')
+              ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
+                li.dropdown-item 
+                  a href=edit_post_path(post) 
+                    =icon('pencil', class: 'fa-lg') 
+                    |&nbsp;
+                    =t('common.edit') 
+                li.dropdown-item 
+                  =link_to post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
+                    =icon('trash-o', class: 'fa-lg') 
+                    |&nbsp;
+                    =t('common.delete')  
       section.post-preview.clearfix
         = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
         = post.preview
