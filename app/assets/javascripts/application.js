@@ -14,8 +14,8 @@
 //= require turbolinks
 //= require trix 
 //= require_tree .
-//= require bootstrap-tagsinput
-//= require jquery
+//= require jquery.tagsinput
+//= require jquery2
 //= require jquery_ujs
 //= require bootstrap.min 
 //= require tagcanvas.min.js

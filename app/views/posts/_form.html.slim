@@ -11,7 +11,8 @@
   .form-group
     = p.label :category_id
     br
-    = p.collection_select :category_id, Category.all, :id, :name, {:class => "form-control"}
+    = p.grouped_collection_select :category_id, Category.all, :id, :name, include_blank: true, {:class => "form-control"}, 
+    /, multiple
   .form-group
   	= p.label :preview 
     = p.text_area :preview, {:class => "form-control"}
@@ -24,7 +25,9 @@
     = p.file_field :image 
   .form-group
     = p.label :all_tags
-    = p.text_field :all_tags, 'data-role'=>'tagsinput'
+    br
+    = p.text_field  :all_tags, {:class => "form-control"}
+    /'data-role' =>'tagsinput'
   .form-group
     input.btn.btn-primary type="submit" value = t('common.save') 
     =link_to t('common.back'), :back, { :class=>"btn btn-back" } 

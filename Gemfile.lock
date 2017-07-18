@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/andrey-str/tagsinput-rails-revisited.git
+  revision: 5f388b5a0701631603fcfb60db52cbe6e8299915
+  specs:
+    tagsinput-rails-revisited (2.0)
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,14 +48,12 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
-    autoprefixer-rails (7.1.2.1)
+    autoprefixer-rails (7.1.2.3)
       execjs
     bindex (0.5.0)
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
-    bootstrap-tagsinput-rails (0.4.2.1)
-      railties (>= 3.1)
     builder (3.2.3)
     byebug (9.0.6)
     capybara (2.14.4)
@@ -106,7 +111,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
-    pg (0.20.0)
+    pg (0.21.0)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
@@ -142,14 +147,18 @@ GEM
       ffi (>= 0.5.0, < 2)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    sass (3.4.25)
+    sass (3.5.1)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    selenium-webdriver (3.4.3)
+    selenium-webdriver (3.4.4)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
     slim (3.0.8)
@@ -172,8 +181,8 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.7)
-    trix (0.10.1)
-      rails
+    trix (0.10.2)
+      rails (> 4.1, < 5.2)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.3)
@@ -198,7 +207,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
-  bootstrap-tagsinput-rails
   byebug
   capybara (~> 2.13)
   carrierwave (~> 1.0)
@@ -218,6 +226,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  tagsinput-rails-revisited!
   trix
   turbolinks (~> 5)
   tzinfo-data
