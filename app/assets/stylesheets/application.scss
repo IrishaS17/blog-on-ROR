@@ -12,9 +12,9 @@
  *
  *= require trix
  *= require_tree .
+ *= require jquery-ui
  *= require_self
  */
 @import "bootstrap";
-@import "jquery.tagsinput";
 @import "font-awesome-sprockets";
 @import "font-awesome";

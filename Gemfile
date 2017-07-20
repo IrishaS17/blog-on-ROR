@@ -16,9 +16,9 @@ gem 'mini_magick'
 gem 'trix'
 gem 'will_paginate'
 gem 'font-awesome-sass', '~> 4.7.0'
+gem 'jquery-ui-rails'
 #gem 'bootstrap-tagsinput-rails'
-gem 'tagsinput-rails-revisited', github: 'andrey-str/tagsinput-rails-revisited'
-
+#gem 'tagsinput-rails-revisited', github: 'andrey-str/tagsinput-rails-revisited'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'slim'

@@ -9,8 +9,7 @@ ru:
         body: 'Содержание'
         image: 'Загрузите файл'
         all_tags: 'Тэги'
-      category: 
-        name: 'Категория'
+        category_id: 'Категория'
   errors:
     messages: 
       blank: 'не может быть пустым'
