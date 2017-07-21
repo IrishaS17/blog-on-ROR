@@ -17,6 +17,7 @@ gem 'trix'
 gem 'will_paginate'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-ui-rails'
+gem 'ancestry'
 #gem 'bootstrap-tagsinput-rails'
 #gem 'tagsinput-rails-revisited', github: 'andrey-str/tagsinput-rails-revisited'
 # Use Puma as the app server

@@ -9,7 +9,10 @@ article.post
         =link_to post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
           =icon('trash-o', class: 'fa-lg')        
     small
-      time = @post.created_at.to_date.strftime("%d, %B, %Y")  
+      time = @post.created_at.to_date.strftime("%d, %B, %Y")
+      |&nbsp; |&nbsp;
+      - if @post.category.present?
+        =link_to @post.category.name, @post.category   
   section.post-body
     = image_tag @post.image.url(:large), class: 'img-show' if @post.image?
     = @post.body.html_safe

@@ -1,0 +1,5 @@
+ul.subnav.nav-pils.nav-stacked.nested_nav
+  - categories.each do |category, children| 
+     li.nav-item 
+        =link_to category.name, category, class: "nav-link"
+        =render 'shared/submenu_categories', categories: children if children.present?

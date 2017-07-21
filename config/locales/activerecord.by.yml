@@ -8,8 +8,11 @@ by:
         preview: 'Кароткі змест'
         body: 'Змест'
         image: 'Загрузіце файл'
-        all_tags: 'Тэгi'
-        category_id: 'Катэгорыя'
+        all_tags: 'Тэгi'    
+        category_id: 'Катэгорыя'  
+      category:       
+        name: 'Назва'
+        parent_id: 'Галоўная катэгорыя'
   errors:
     messages: 
       blank: 'не можа быть пустым'

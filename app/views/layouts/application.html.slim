@@ -34,13 +34,15 @@ html
         div.col-md-9
           =yield 
         div.col-md-3
-          h2 =t('.tags_cloud')
-          div#myCanvasContainer
-            canvas#myCanvas width="300" height="300"
-              ul
-                - tag_cloud Tag.counts, %w{xs s m l xl} do |tag, css_class|
-                  li 
-                    =link_to tag.name, tag_path(tag.name), class: css_class 
-       
+          =render 'shared/submenu'
+          div.tag_cloud
+            h2 =t('.tags_cloud')
+            div#myCanvasContainer
+              canvas#myCanvas width="300" height="300"
+                ul
+                  - tag_cloud Tag.counts, %w{xs s m l xl} do |tag, css_class|
+                    li 
+                      =link_to tag.name, tag_path(tag.name), class: css_class 
          
+           
             

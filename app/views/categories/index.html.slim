@@ -7,12 +7,14 @@ section#categories
       tr
       	th id
       	th Name
+        th Parent
       	th Action
     tbody
       -@categories.each_with_index do |category, index|
         tr
           td =index+1
           td =category.name
+          td =category.parent.name if category.parent.present?
           td =link_to 'Edit', edit_category_path(category), class: 'btn btn-outline-primary btn-sm'
           td
             =link_to 'Delete', category_path(category), method: :delete, data: {confirm: 'Are you shure?'}, class: 'btn btn-outline-danger btn-sm' 

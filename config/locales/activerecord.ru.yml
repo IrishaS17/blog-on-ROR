@@ -10,6 +10,9 @@ ru:
         image: 'Загрузите файл'
         all_tags: 'Тэги'
         category_id: 'Категория'
+      category:       
+        name: 'Название'
+        parent_id: 'Категория-родитель'
   errors:
     messages: 
       blank: 'не может быть пустым'
