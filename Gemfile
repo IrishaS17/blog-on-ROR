@@ -18,12 +18,14 @@ gem 'will_paginate'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-ui-rails'
 gem 'ancestry'
+#gem "breadcrumbs_on_rails"
+
 #gem 'bootstrap-tagsinput-rails'
 #gem 'tagsinput-rails-revisited', github: 'andrey-str/tagsinput-rails-revisited'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'slim'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'rails-assets-tether'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -1,0 +1,8 @@
+=render 'shared/breadcrumb', category: @category
+h1 =t('.category') + @category.name
+section#posts
+  -if @posts.present?
+    =render @posts
+  else
+    'Данные не найдены!
+=will_paginate @posts, :renderer => BootstrapPaginationHelper::LinkRenderer

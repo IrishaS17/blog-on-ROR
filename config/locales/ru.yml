@@ -36,4 +36,9 @@ ru:
       title: 'Новая категория'
     edit:
       title: 'Редактирование категории'
+    show:
+      category: 'Статьи с категорией: '
+  shared:
+    submenu:
+      title:  'Категории'
     

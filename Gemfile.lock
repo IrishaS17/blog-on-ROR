@@ -40,8 +40,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
-    ancestry (2.2.2)
-      activerecord (>= 3.0.0)
+    ancestry (3.0.1)
+      activerecord (>= 3.2.0)
     arel (8.0.0)
     autoprefixer-rails (7.1.2.3)
       execjs
@@ -103,7 +103,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.8.0)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     multi_json (1.12.1)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -204,7 +204,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
-  bootstrap
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara (~> 2.13)
   carrierwave (~> 1.0)

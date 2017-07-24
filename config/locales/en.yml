@@ -64,3 +64,6 @@ en:
       title: 'New category'
     edit:
       title: 'Edit catecgory'
+    show:
+      category: 'Posts whith category: '
+   

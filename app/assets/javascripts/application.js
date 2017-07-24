@@ -14,7 +14,7 @@
 //= require turbolinks
 //= require trix 
 //= require_tree .
-//= require jquery-ui
+//= require jquery-ui/widgets/autocomplete
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min 

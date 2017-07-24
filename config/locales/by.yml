@@ -36,5 +36,9 @@ by:
       title: 'Новая катэгорыя'
     edit:
       title: 'Змяненне катэгорыi'
-   
+    show:
+      category: 'Артыкулы з катэгорыей: '
+  shared:
+    submenu:
+      title:  'Катэгорыi' 
     
