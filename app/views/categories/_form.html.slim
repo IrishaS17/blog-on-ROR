@@ -12,7 +12,7 @@
   .form-group
     = p.label :parent_id
     br
-    = p.collection_select :parent_id, Category.where("id != #{@category.id}").order(:name), :id, :name, { class: "form-control" }
+    = p.collection_select :parent_id, @categories, :id, :name, {include_blank: true,  class: "form-control" }
 
   .form-group
   	input.btn.btn-primary type="submit" value = t('common.save') 

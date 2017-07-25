@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @categories = Category.where("id != #{@category}").order(:name)
+    @categories = Category.where("id != #{@category.id}").order(:name)
   end
 
   def update
