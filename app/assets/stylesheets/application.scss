@@ -13,8 +13,10 @@
  *= require trix
  *= require_tree .
  *= require jquery-ui/autocomplete
+ *= require rails_emoji_picker
  *= require_self
  */
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'rails_emoji_picker'

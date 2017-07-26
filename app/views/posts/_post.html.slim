@@ -25,7 +25,8 @@
                     =t('common.delete')
       section.post-preview.clearfix
         = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
-        = post.preview
+        = content_with_emoji(post.preview)
+        /= post.preview
       section.post-tags
         = raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ')    
     

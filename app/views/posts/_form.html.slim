@@ -13,12 +13,12 @@
     br
     = p.collection_select :category_id, Category.order(:name), :id, :name, { class: "form-control" }
     / {multiple: true} 
-  .form-group
+  .form-group.emoji-picker-container
   	= p.label :preview 
-    = p.text_area :preview, {:class => "form-control"}
+    = p.text_field :preview, class: "form-control",  data: { emojiable: true }
   .form-group
   	= p.label :body 
-  	= p.trix_editor :body, {:class => "editor"}
+  	= p.trix_editor :body, class: "editor"
   .form-group
     = p.label :image
     br

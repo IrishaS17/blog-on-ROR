@@ -18,6 +18,8 @@ gem 'will_paginate'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-ui-rails'
 gem 'ancestry'
+gem 'faker'
+gem 'rails_emoji_picker'
 #gem "breadcrumbs_on_rails"
 
 #gem 'bootstrap-tagsinput-rails'

@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery-ui/widgets/autocomplete
 //= require jquery
+//= require rails_emoji_picker
 //= require jquery_ujs
 //= require bootstrap.min 
 //= require tagcanvas.min.js
