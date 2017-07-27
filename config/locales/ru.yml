@@ -7,6 +7,7 @@ ru:
       language: 'Язык'
       registration: 'Регистрация'
       sign_in: 'Вход' 
+      exit: 'Выход'
       tags_cloud: 'Облако тэгов' 
   common:
     errors: 'Произошла ошибка'

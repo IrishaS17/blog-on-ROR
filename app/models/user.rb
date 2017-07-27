@@ -1,15 +1,6 @@
 class User < ApplicationRecord
-	#validates :phone, numericality: {  greater_than: 0 }
-	validates :email, :password, presence: true
-	validates :email, uniqueness: true
-	before_validation :ensure_login_has_a_value
-
-	
-	#after_create {UserMailer.new_user_created(self).deliver}
-	#after_destroy {category.inc(:user_count, -1)}
-	def ensure_login_has_a_value
-      if name.nil?
-        self.name = email if email.present? && name.blank?
-      end
-    end
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :confirmable, :validatable
 end

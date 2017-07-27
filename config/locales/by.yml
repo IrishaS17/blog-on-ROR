@@ -7,6 +7,7 @@ by:
       language: 'Мова' 
       registration: 'Рэгiстрацыя'
       sign_in: 'Увайсцi'
+      exit: 'Выйсцi'
       tags_cloud: 'Воблака тэгаў'
   common:
     errors: 'Адбылася памылка'
