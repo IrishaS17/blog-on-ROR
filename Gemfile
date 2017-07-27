@@ -9,8 +9,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-gem 'pg', '~> 0.18'
+gem 'sqlite3' #, :group => :development
+gem 'pg', '~> 0.18' #, :group => :production
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'trix'
@@ -18,7 +18,7 @@ gem 'will_paginate'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-ui-rails'
 gem 'ancestry'
-gem 'faker'
+gem 'faker', '~> 1.8', '>= 1.8.4'
 gem 'rails_emoji_picker'
 #gem "breadcrumbs_on_rails"
 
