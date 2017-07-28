@@ -17,6 +17,8 @@ by:
     delete: 'Удалiць'
     save: 'Захаваць'
     confirm: 'Вы ўпэўнены?'
+    password: 'Пароль '
+    password_confirmation: 'Паўтарыце пароль'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
@@ -42,4 +44,8 @@ by:
   shared:
     submenu:
       title:  'Катэгорыi' 
-    
+  devise:
+    sessions:
+      new:
+        log_in: 'Уваход'
+        remember_me: 'Запомніць мяне'  

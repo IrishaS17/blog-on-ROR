@@ -24,13 +24,11 @@ html
                 li.dropdown-item =link_to 'Беларуская', locale: "by"
                 li.dropdown-item =link_to 'Русский', locale: "ru"
                 li.dropdown-item =link_to 'English', locale: "en"
-          ul.navbar-nav.mr-auto
-          /=link_to t('.write'), new_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
-          /a.btn.btn-outline-primary.pull-xs-right href="#" 
           -if user_signed_in?
             li.nav-item
-              =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "btn btn-outline-primary pul-xs-right"
-          else
+              =link_to t('.write'), new_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
+              =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "btn   pul-xs-right"
+          -else
             li.nav-item
               =link_to t('.sign_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}
               =link_to t('.registration'), new_user_registration_path, {:class=>"btn btn-outline-primary pul-xs-right"}
@@ -38,15 +36,12 @@ html
                    
     div.container.main
       div.row
-        div.col-md-12
+        div.col-md-9
           -flash.each do |name, message|
-            div.alert
-              =bootstrap_class_for(name)
-              button.close data-dismiss="alert" 6times;
+            div.alert class= bootstrap_class_for(name)
+              button.close data-dismiss="alert" &times;
               =message
           end
-      div.row
-        div.col-md-9
           =yield 
         div.col-md-3
           =render 'shared/submenu'

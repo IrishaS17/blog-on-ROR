@@ -11,11 +11,10 @@ module ApplicationHelper
   end
 
   def bootstrap_class_for(name)
-    {
-      success: "alert-success",
-      error: "alert-danger",
+    { success:"alert-success",
+      error:  "alert-danger",
       danger: "alert-danger",
-      alert: "alert-warning",
+      alert:  "alert-warning",
       notice: "alert-info"
     }[name.to_sym] || name
   end

@@ -6,7 +6,7 @@ ru:
       write: 'Написать'
       language: 'Язык'
       registration: 'Регистрация'
-      sign_in: 'Вход' 
+      sign_in: 'Войти' 
       exit: 'Выход'
       tags_cloud: 'Облако тэгов' 
   common:
@@ -17,6 +17,8 @@ ru:
     delete: 'Удалить'
     save: 'Сохранить'
     confirm: 'Вы действительно хотите удалить пост?'
+    password: 'Пароль '
+    password_confirmation: 'Повторите пароль'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
@@ -42,4 +44,9 @@ ru:
   shared:
     submenu:
       title:  'Категории'
+  devise:
+    sessions:
+      new:
+        log_in: 'Авторизация'
+        remember_me: 'Запомнить меня'  
     

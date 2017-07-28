@@ -21,6 +21,7 @@ gem 'ancestry'
 gem 'faker', '~> 1.8', '>= 1.8.4'
 gem 'rails_emoji_picker'
 gem 'devise'
+gem "letter_opener", :group => :development
 #gem "breadcrumbs_on_rails"
 
 #gem 'bootstrap-tagsinput-rails'

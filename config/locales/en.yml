@@ -37,7 +37,7 @@ en:
       write: 'New Post' 
       language: 'Language' 
       registration: 'Registration'
-      sign_in: 'Sign in'
+      sign_in: 'Log in'
       exit: 'Exit'
       tags_cloud: 'Tags cloud'
   common:
