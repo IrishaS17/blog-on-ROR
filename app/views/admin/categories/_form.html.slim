@@ -5,7 +5,7 @@
       - @category.errors.full_messages.each do |message|
        li = message
 
-= form_for @category do |p|
+= form_for [:admin, @category] do |p|
   .form-group
     = p.label :name
     = p.text_field :name, {:class => "form-control"}
@@ -16,5 +16,4 @@
 
   .form-group
   	input.btn.btn-primary type="submit" value = t('common.save') 
-    /t('.submit', action: @post.new.record? ? 'Стварыць' : 'Змянiць') 
     =link_to t('common.back'), :back, { :class=>"btn btn-back" } 

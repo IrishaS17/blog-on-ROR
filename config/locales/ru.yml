@@ -9,6 +9,7 @@ ru:
       sign_in: 'Войти' 
       exit: 'Выход'
       tags_cloud: 'Облако тэгов' 
+      users: 'Пользователи'
   common:
     errors: 'Произошла ошибка'
     success: 'Сатья сохранена'
@@ -16,34 +17,38 @@ ru:
     edit: 'Изменить'
     delete: 'Удалить'
     save: 'Сохранить'
-    confirm: 'Вы действительно хотите удалить пост?'
+    confirm: 'Вы уверены?'
     password: 'Пароль '
     password_confirmation: 'Повторите пароль'
+
+    categories: 'Категории'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
   posts:
     index:
       title: 'Сатьи'
-    new:
-      title: 'Новая статья'
-    edit: 
-      title: 'Редактирование сатьи'
   tags:
     show:
       tag: 'Статьи с тэгом: '
-  categories: 
-    index: 
-      title: 'Категории'
-    new:
-      title: 'Новая категория'
-    edit:
-      title: 'Редактирование категории'
+  admin:
+    categories: 
+      index: 
+        name: 'Название'
+        parent: 'Родитель'
+        action: 'Действия'
+      new:
+        title: 'Новая категория'
+      edit:
+        title: 'Редактирование категории'
+    posts:
+      new:
+        title: 'Новая статья'
+      edit: 
+        title: 'Редактирование сатьи'
+  categories:
     show:
       category: 'Статьи с категорией: '
-  shared:
-    submenu:
-      title:  'Категории'
   devise:
     sessions:
       new:

@@ -5,11 +5,11 @@ article.post
     div.row
       div.col-md-9
         h1 = @post.title
-      -if user_signed_in? 
+      -if user_signed_in? && current_user.admin?
         div.col-md-3.right-block
-          a.btn.btn-danger href= edit_post_path(@post)
+          a.btn.btn-danger href= edit_admin_post_path(@post)
             =icon('pencil', class: 'fa-lg')
-          =link_to post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
+          =link_to admin_post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
             =icon('trash-o', class: 'fa-lg')
       end        
     small

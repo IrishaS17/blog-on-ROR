@@ -6,21 +6,20 @@
             small
              = post.created_at.to_date.strftime("%d, %B, %Y") 
              |&nbsp; |&nbsp;
-             - if post.category.present?
-                /=link_to post.category.root.name, post.category.root 
+             - if post.category.present? 
                 =link_to post.category.name, post.category 
-          -if user_signed_in?      
+          -if user_signed_in? && current_user.admin?
             div.col-md-2.right-block
               div.btn-group
                 a#dropdownMenuLink data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =icon('ellipsis-h', class: 'fa-2x')
                 ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
                   li.dropdown-item 
-                    a href=edit_post_path(post) 
+                    a href=edit_admin_post_path(post) 
                       =icon('pencil', class: 'fa-lg') 
                       |&nbsp;
                       =t('common.edit')   
                   li.dropdown-item 
-                    =link_to post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
+                    =link_to admin_post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
                       =icon('trash-o', class: 'fa-lg') 
                       |&nbsp;
                       =t('common.delete')

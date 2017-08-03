@@ -8,16 +8,24 @@ html
   body
     header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
       div.container
-        =link_to 'IrishBlog', posts_path, {:class=>"navbar-brand"}
+        -if user_signed_in? && current_user.admin? 
+          =link_to 'IrishBlog::admin', posts_path, {:class=>"navbar-brand"}
+        -else
+          =link_to 'IrishBlog', posts_path, {:class=>"navbar-brand"}
+        end
         div.collapse.navbar-collapse id="navbarNavDropdown"
           ul.navbar-nav.mr-auto
             li class="nav-item ='active' if current_page?(root_path) || current_page?(posts_path)"
               =link_to t('.news'), posts_path, {:class=>"nav-link"}
               span.sr-only (current)
             li.nav-item
-              =link_to t('.followers'), posts_path, {:class=>"nav-link"}
+              =link_to t('.users'), users_path, {:class=>"nav-link"}
+            -if user_signed_in? && current_user.admin?      
+              li.nav-item
+                =link_to t('common.categories'), admin_categories_path, {:class=>"nav-link"} 
+            end
             li.nav-item
-              a.nav-link.disabled href="#" Disabled
+              =link_to t('.followers'), posts_path, {:class=>"nav-link"}
             li.nav-item.dropdown
               a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =t('.language')
               ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
@@ -26,11 +34,15 @@ html
                 li.dropdown-item =link_to 'English', locale: "en"
           -if user_signed_in?
             li.nav-item
-              =link_to t('.write'), new_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
-              =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "btn   pul-xs-right"
+              =link_to t('.write'), new_admin_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =t('current_user.name')
+              ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
+                =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "dropdown-item"
           -else
             li.nav-item
               =link_to t('.sign_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}
+              '&nbsp;
               =link_to t('.registration'), new_user_registration_path, {:class=>"btn btn-outline-primary pul-xs-right"}
           end
                    

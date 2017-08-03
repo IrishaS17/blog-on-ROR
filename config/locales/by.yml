@@ -9,6 +9,7 @@ by:
       sign_in: 'Увайсцi'
       exit: 'Выйсцi'
       tags_cloud: 'Воблака тэгаў'
+      users: 'Карыстачы'
   common:
     errors: 'Адбылася памылка'
     success: 'Артыкул захаваны'
@@ -19,31 +20,35 @@ by:
     confirm: 'Вы ўпэўнены?'
     password: 'Пароль '
     password_confirmation: 'Паўтарыце пароль'
+
+    categories: 'Катэгорыi'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
   posts:
     index:
       title: 'Артыкулы'
-    new:
-      title: 'Новы артыкул'
-    edit: 
-      title: 'Змяненне артыкула'
   tags:
     show:
       tag: 'Артыкулы з тэгам: '
-  categories: 
-    index: 
-      title: 'Катэгорыi'
-    new:
-      title: 'Новая катэгорыя'
-    edit:
-      title: 'Змяненне катэгорыi'
+  admin:
+    categories: 
+      index: 
+        name: 'Назва'
+        parent: 'Галоўная катэгорыя'
+        action: 'Дзеянні'
+      new:
+        title: 'Новая катэгорыя'
+      edit:
+        title: 'Змяненне катэгорыi'
+    posts:
+      new:
+        title: 'Новы артыкул'
+      edit: 
+        title: 'Змяненне артыкула'
+  categories:    
     show:
       category: 'Артыкулы з катэгорыей: '
-  shared:
-    submenu:
-      title:  'Катэгорыi' 
   devise:
     sessions:
       new:

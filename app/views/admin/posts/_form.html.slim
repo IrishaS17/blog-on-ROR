@@ -4,7 +4,7 @@
     ul
       - @post.errors.full_messages.each do |message|
        li = message
-= form_for @post, html: {multipart: true} do |p|
+= form_for [:admin, @post], html: {multipart: true} do |p|
   .form-group
     = p.label :title
     = p.text_field :title, {:class => "form-control"}
