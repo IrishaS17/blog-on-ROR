@@ -1,26 +1,23 @@
 h2 Sign up
 
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
-  /= devise_error_messages!
+  = devise_error_messages!
 
-  div.form-group
-    = f.label :email
-    = f.email_field :email, autofocus: true, class: "form-control"
- 
-  div.form-group
-    = f.label t('common.password')
-    -if @minimum_password_length 
-      em 
-        '&nbsp;(
-        = @minimum_password_length 
-        '&nbsp; символов минимум)
-    end 
-    = f.password_field :password, autocomplete: "off", class: "form-control"
-
-  div.form-group
-    = f.label t('common.password_confirmation')
-    = f.password_field :password_confirmation, autocomplete: "off", class: "form-control" 
-
+  div.input-group
+    span.input-group-addon.btn-outline-primary
+      =icon('envelope-o', class: 'fa-fw') 
+    = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"
+  br
+  div.input-group
+    span.input-group-addon.btn-outline-primary
+      =icon('key', class: 'fa-fw') 
+    = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('common.password')
+  br
+  div.input-group
+    span.input-group-addon.btn-outline-primary
+      =icon('key', class: 'fa-fw') 
+    = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('common.password_confirmation')
+  br
   div.actions
     = f.submit "Sign up", class: "btn btn-primary" 
   

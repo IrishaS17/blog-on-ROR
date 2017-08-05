@@ -7,7 +7,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  
   body
     nav.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
-        /.container
+      .container
         button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
           span.navbar-toggler-icon
         -if user_signed_in? && current_user.admin? 
@@ -39,34 +39,37 @@ html
                   =link_to 'Русский', locale: "ru"
                 .dropdown-item
                   =link_to 'English', locale: "en"
-            /-if user_signed_in? && current_user.name
-            li.nav-item
-              =link_to t('.write'), new_admin_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
-            /end
           ul.navbar-nav.pul-xs-right
             -if user_signed_in? 
+              -if current_user.name
+                li.nav-item
+                  =link_to new_admin_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
+                    =icon('pencil-square-o', class: 'fa-lg')
+              end
+              '&nbsp;
               li.nav-item.dropdown
                 a#navbarDropdownUserLink.nav-link.dropdown-toggle[data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+                  =icon('user', class: 'fa-lg')
+                  '&nbsp;
                   -if current_user.name==nil
                     'NO_NAME 
                   -else  
                     =current_user.name 
-                  end
+                  end 
                 .dropdown-menu[aria-labelledby="navbarDropdownUserLink"]
-                  =link_to t('.profile'), destroy_user_session_path, method: :delete, class: "dropdown-item"
-                  /li.dropdown-item 
-                     =link_to admin_post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
-                      =icon('trash-o', class: 'fa-lg') 
-                      |&nbsp;
-                      =t('common.delete')
-                  =link_to t('.settings'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                  =link_to t('common.profile'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                    /=icon('user', class: 'fa-fw')
+                  =link_to t('common.settings'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                    /=icon('cog', class: 'fa-fw')
                   =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                    /=icon('sign-out ', class: 'fa-fw')
             -else
               li.nav-item
                 =link_to t('.sign_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}
                 '&nbsp;
                 =link_to t('.registration'), new_user_registration_path, {:class=>"btn btn-outline-primary pul-xs-right"}
-              end              
+            end
+
     div.container.main
       div.row
         div.col-md-9
@@ -87,9 +90,6 @@ html
             span class="input-group-btn"
               button class="btn btn-secondary btn-outline-primary" type="button" 
                 =icon('search', class: 'fa-lg search') 
-            
-            /button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
-             
           =render 'shared/submenu'
           div.tag_cloud
             /h2 =t('.tags_cloud')

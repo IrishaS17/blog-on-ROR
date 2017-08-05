@@ -21,7 +21,8 @@ ru:
     confirm: 'Вы уверены?'
     password: 'Пароль '
     password_confirmation: 'Повторите пароль'
-
+    profile: 'Профиль'
+    settings: 'Настройки'
     categories: 'Категории'
   will_paginate:
     previous_label: '&larr; Назад '

@@ -21,7 +21,8 @@ by:
     confirm: 'Вы ўпэўнены?'
     password: 'Пароль '
     password_confirmation: 'Паўтарыце пароль'
-
+    profile: 'Профiль'
+    settings: 'Настройки'
     categories: 'Катэгорыi'
   will_paginate:
     previous_label: '&larr; Назад '

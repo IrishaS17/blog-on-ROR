@@ -1,20 +1,24 @@
 h2 =t('.log_in')
 
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
-  div.form-group
-    = f.label :email
-    = f.email_field :email, autofocus: true, class: "form-control"
-  div.form-group
-    = f.label t('common.password')
-    = f.password_field :password, autocomplete: "off", class: "form-control"
- 
+  .input-group
+    /= f.label :email
+    span.input-group-addon.btn-outline-primary
+      =icon('envelope-o', class: 'fa-fw') 
+    = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"
+  br
+  .input-group
+    span.input-group-addon.btn-outline-primary
+      =icon('key', class: 'fa-fw') 
+    = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('common.password')
+  br
   - if devise_mapping.rememberable? 
-    div.form-group
+    .form-group
       = f.check_box :remember_me
       = f.label t('.remember_me')  
   end
 
-  div.actions
+  .actions
     = f.submit "Log in", class: "btn btn-primary" 
 end 
 
