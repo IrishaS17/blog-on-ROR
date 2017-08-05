@@ -6,18 +6,21 @@ html
     script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  
   body
-    header.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
-      div.container
+    nav.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
+        /.container
+        button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
+          span.navbar-toggler-icon
         -if user_signed_in? && current_user.admin? 
           =link_to 'IrishBlog::admin', posts_path, {:class=>"navbar-brand"}
         -else
           =link_to 'IrishBlog', posts_path, {:class=>"navbar-brand"}
         end
-        div.collapse.navbar-collapse id="navbarNavDropdown"
+        #navbarNavDropdown.collapse.navbar-collapse
           ul.navbar-nav.mr-auto
             li class="nav-item ='active' if current_page?(root_path) || current_page?(posts_path)"
               =link_to t('.news'), posts_path, {:class=>"nav-link"}
-              span.sr-only (current)
+              span.sr-only 
+                | (current)
             li.nav-item
               =link_to t('.users'), users_path, {:class=>"nav-link"}
             -if user_signed_in? && current_user.admin?      
@@ -27,25 +30,43 @@ html
             li.nav-item
               =link_to t('.followers'), posts_path, {:class=>"nav-link"}
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =t('.language')
-              ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
-                li.dropdown-item =link_to 'Беларуская', locale: "by"
-                li.dropdown-item =link_to 'Русский', locale: "ru"
-                li.dropdown-item =link_to 'English', locale: "en"
-          -if user_signed_in?
+              a#navbarDropdownMenuLink.nav-link.dropdown-toggle[data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+                =t('.language')
+              .dropdown-menu[aria-labelledby="navbarDropdownMenuLink"]
+                .dropdown-item 
+                  =link_to 'Беларуская', locale: "by"
+                .dropdown-item
+                  =link_to 'Русский', locale: "ru"
+                .dropdown-item
+                  =link_to 'English', locale: "en"
+            /-if user_signed_in? && current_user.name
             li.nav-item
               =link_to t('.write'), new_admin_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
-            li.nav-item.dropdown
-              a.nav-link.dropdown-toggle id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =t('current_user.name')
-              ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
-                =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "dropdown-item"
-          -else
-            li.nav-item
-              =link_to t('.sign_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}
-              '&nbsp;
-              =link_to t('.registration'), new_user_registration_path, {:class=>"btn btn-outline-primary pul-xs-right"}
-          end
-                   
+            /end
+          ul.navbar-nav.pul-xs-right
+            -if user_signed_in? 
+              li.nav-item.dropdown
+                a#navbarDropdownUserLink.nav-link.dropdown-toggle[data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+                  -if current_user.name==nil
+                    'NO_NAME 
+                  -else  
+                    =current_user.name 
+                  end
+                .dropdown-menu[aria-labelledby="navbarDropdownUserLink"]
+                  =link_to t('.profile'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                  /li.dropdown-item 
+                     =link_to admin_post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
+                      =icon('trash-o', class: 'fa-lg') 
+                      |&nbsp;
+                      =t('common.delete')
+                  =link_to t('.settings'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+                  =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "dropdown-item"
+            -else
+              li.nav-item
+                =link_to t('.sign_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}
+                '&nbsp;
+                =link_to t('.registration'), new_user_registration_path, {:class=>"btn btn-outline-primary pul-xs-right"}
+              end              
     div.container.main
       div.row
         div.col-md-9
@@ -54,8 +75,21 @@ html
               button.close data-dismiss="alert" &times;
               =message
           end
+          -if user_signed_in? && current_user.name==nil
+            div.alert.alert-info
+              button.close data-dismiss="alert" &times;
+              =t('.nil_name')
+          end
           =yield 
         div.col-md-3
+          .input-group
+            input.form-control.search[placeholder="Search" type="text"]
+            span class="input-group-btn"
+              button class="btn btn-secondary btn-outline-primary" type="button" 
+                =icon('search', class: 'fa-lg search') 
+            
+            /button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
+             
           =render 'shared/submenu'
           div.tag_cloud
             /h2 =t('.tags_cloud')

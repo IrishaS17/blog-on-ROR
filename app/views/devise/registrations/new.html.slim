@@ -6,7 +6,7 @@ h2 Sign up
   div.form-group
     = f.label :email
     = f.email_field :email, autofocus: true, class: "form-control"
-  
+ 
   div.form-group
     = f.label t('common.password')
     -if @minimum_password_length 

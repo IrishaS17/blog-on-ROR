@@ -38,8 +38,8 @@ en:
       language: 'Language' 
       registration: 'Registration'
       sign_in: 'Log in'
-      exit: 'Exit'
       tags_cloud: 'Tags cloud'
+      nil_name: 'Fill in the profile to access the features of the blog.'
   common:
     errors: 'Errors'
     success: 'Post saved'
