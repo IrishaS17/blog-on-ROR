@@ -18,4 +18,10 @@ module ApplicationHelper
       notice: "alert-info"
     }[name.to_sym] || name
   end
+
+  def active_link (current)
+    if current_page?(root_path) || current_page?(current)
+      return 'active'
+    end
+  end
 end
