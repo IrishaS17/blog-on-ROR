@@ -5,8 +5,6 @@ by:
       followers: 'Падпiскi'
       write: 'Напiсаць' 
       language: 'Мова' 
-      registration: 'Рэгiстрацыя'
-      sign_in: 'Увайсцi'
       exit: 'Выйсцi'
       tags_cloud: 'Воблака тэгаў'
       users: 'Карыстачы'
@@ -24,6 +22,14 @@ by:
     profile: 'Профiль'
     settings: 'Настройки'
     categories: 'Катэгорыi'
+    sign_up: 'Рэгiстрацыя'
+    log_in: 'Увайсцi'
+    registration: 'Зарэгістравацца'
+    forgot_password: 'Забылi пароль?'
+    receive_confirmation: 'Не атрымалі інструкцыі пацверджання?'
+    receive_unlock: 'Не атрымалі інструкцыі па разблакоўцы?'
+    resend_confirmation: 'Aдправіць пацвярджэнне'
+    resend: 'Aдправіць'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
@@ -56,3 +62,8 @@ by:
       new:
         log_in: 'Уваход'
         remember_me: 'Запомніць мяне'  
+    passwords:
+      new:
+        reset_password: 'Змянiць пароль'
+      edit: 
+        change_password: 'Змянiць пароль'

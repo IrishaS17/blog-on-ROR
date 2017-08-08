@@ -5,8 +5,6 @@ ru:
       followers: 'Подписки'
       write: 'Написать'
       language: 'Язык'
-      registration: 'Регистрация'
-      sign_in: 'Войти' 
       exit: 'Выход'
       tags_cloud: 'Облако тэгов' 
       users: 'Пользователи'
@@ -24,6 +22,14 @@ ru:
     profile: 'Профиль'
     settings: 'Настройки'
     categories: 'Категории'
+    sign_up: 'Регистрация'
+    log_in: 'Войти'
+    registration: 'Зарегистрироваться'
+    forgot_password: 'Забыли пароль?'
+    receive_confirmation: 'Не получили инструкции по подтверждению аккаунта?'
+    receive_unlock: 'Не получили инструкции по разблокировке?'
+    resend_confirmation: 'Отправить подтверждение'
+    resend: 'Отправить'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
@@ -56,4 +62,9 @@ ru:
       new:
         log_in: 'Авторизация'
         remember_me: 'Запомнить меня'  
-    
+    passwords:
+      new:
+        reset_password: 'Сбросить пароль'
+      edit: 
+        change_password: 'Изменить пароль'
+  

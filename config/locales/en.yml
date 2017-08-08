@@ -36,8 +36,6 @@ en:
       followers: 'Followers'
       write: 'New Post' 
       language: 'Language' 
-      registration: 'Registration'
-      sign_in: 'Log in'
       tags_cloud: 'Tags cloud'
       nil_name: 'Fill in the profile to access the features of the blog.'
   common:
@@ -48,6 +46,13 @@ en:
     delete: 'Delete'
     save: 'Save'
     confirm: 'Are you shure?'
+    sign_up: 'Sign up'
+    log_in: 'Log in'
+    resend: 'Resend'
+    #resend_confirmation: 'Resend confirmation instructions'
+    #forgot_password: 'Forgot your password?'
+    #receive_confirmation: 'Didn't receive confirmation instructions?'
+    #receive_unlock: 'Didn't receive unlock instructions?'
   posts:
     index:
       title: 'Posts'
@@ -67,4 +72,7 @@ en:
       title: 'Edit catecgory'
     show:
       category: 'Posts whith category: '
-   
+  
+      
+    
+  
