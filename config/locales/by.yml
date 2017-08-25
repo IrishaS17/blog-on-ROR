@@ -30,6 +30,7 @@ by:
     receive_unlock: 'Не атрымалі інструкцыі па разблакоўцы?'
     resend_confirmation: 'Aдправіць пацвярджэнне'
     resend: 'Aдправіць'
+    name: 'Iмя'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'

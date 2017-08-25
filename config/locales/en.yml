@@ -49,6 +49,7 @@ en:
     sign_up: 'Sign up'
     log_in: 'Log in'
     resend: 'Resend'
+    name: 'Name'
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'

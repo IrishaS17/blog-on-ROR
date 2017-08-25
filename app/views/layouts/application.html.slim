@@ -42,7 +42,7 @@ html
             -if user_signed_in? 
               -if current_user.name
                 li.nav-item
-                  =link_to new_admin_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
+                  =link_to new_post_path, {:class=>"btn btn-outline-primary pull-xs-right"} 
                     =icon('pencil-square-o', class: 'fa-lg')
               end
               '&nbsp;

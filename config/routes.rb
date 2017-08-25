@@ -3,16 +3,16 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope "/:locale" do
-    devise_for :users
+    devise_for :users, :controllers => { registrations: 'registrations' }
     root 'posts#index'
-    resources :posts, only: [:show, :index, :create, :edit]
+    resources :posts, except: [:destroy]
     resources :users
     resources :tags, only: [:show]
     resources :categories, only: [:show] 
 
 
     namespace :admin do
-      resources :posts, except: [:show, :index, :create, :edit]
+      resources :posts, only: [:destroy, :update, :index]
       resources :categories, except: [:show]
       resources :pictures, only: [:create, :destroy]
 

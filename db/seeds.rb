@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-6.times do
+18.times do
 	Post.create(
-		title: Faker::Lovecraft.sentence(3, 1)+Faker::SlackEmoji.emoji,
-    preview: Faker::Lovecraft.paragraph,
+		title: Faker::Lovecraft.sentence(3, 1),
+    preview: Faker::Lovecraft.paragraph + Faker::SlackEmoji.emoji,
     body: Faker::Lovecraft.paragraph(4),
     created_at: Faker::Date.backward(14),
-    category_id: Faker::Number.between(1, Category.count)
+    category_id: Faker::Number.between(1, Category.count),
+    user_id: Faker::Number.between(1, User.count)
 	)
 end
 
@@ -24,7 +24,7 @@ end
   )
 end
 
-10.times do
+21.times do
   Tagging.create(
 	  tag_id: Faker::Number.between(1, Tag.count),
 	  post_id: Faker::Number.between(1, Post.count),

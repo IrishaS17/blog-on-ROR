@@ -1,0 +1,25 @@
+
+article.post
+  section.post-head
+    div.row
+      div.col-md-9
+        h1 = @post.title
+      -if user_signed_in? && current_user.admin?
+        div.col-md-3.right-block
+          a.btn.btn-danger href= edit_post_path(@post)
+            =icon('pencil', class: 'fa-lg')
+          =link_to admin_post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
+            =icon('trash-o', class: 'fa-lg')
+      end        
+    small
+      time = @post.created_at.to_date.strftime("%d, %B, %Y")
+      |&nbsp; |&nbsp;
+      - if @post.category.present?
+        =link_to @post.category.name, @post.category 
+  section.post-preview
+    = content_with_emoji(@post.preview)  
+  section.post-body
+    = image_tag @post.image.url(:large), class: 'img-show' if @post.image?
+    = @post.body.html_safe
+  section.post-tags
+    = raw @post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ')    
