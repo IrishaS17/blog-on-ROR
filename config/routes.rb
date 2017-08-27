@@ -8,12 +8,10 @@ Rails.application.routes.draw do
     resources :posts, except: [:destroy]
     resources :users
     resources :tags, only: [:show]
-    resources :categories, only: [:show] 
-
+    resources :categories
 
     namespace :admin do
       resources :posts, only: [:destroy, :update, :index]
-      resources :categories, except: [:show]
       resources :pictures, only: [:create, :destroy]
 
     end

@@ -31,6 +31,7 @@ ru:
     resend_confirmation: 'Отправить подтверждение'
     resend: 'Отправить'
     name: 'Имя'
+    author: 'Автор'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'

@@ -8,16 +8,18 @@
              |&nbsp; |&nbsp;
              - if post.category.present? 
                 =link_to post.category.name, post.category 
-          -if user_signed_in? && current_user.admin?
+          -if user_signed_in? && (current_user.admin? || current_user.name == post.user.name)
             div.col-md-2.right-block
               div.btn-group
                 a#dropdownMenuLink data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" =icon('ellipsis-h', class: 'fa-2x')
                 ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink"
-                  li.dropdown-item 
-                    a href=edit_post_path(post) 
-                      =icon('pencil', class: 'fa-lg') 
-                      |&nbsp;
-                      =t('common.edit')   
+                  -unless current_user.admin?
+                    li.dropdown-item 
+                      a href=edit_post_path(post) 
+                        =icon('pencil', class: 'fa-lg') 
+                        |&nbsp;
+                        =t('common.edit')   
+                  end
                   li.dropdown-item 
                     =link_to admin_post_path(post), method: :delete, data: {confirm: t('common.confirm')} 
                       =icon('trash-o', class: 'fa-lg') 
@@ -28,6 +30,10 @@
         = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
         = content_with_emoji(post.preview)
         /= post.preview
+      section.post-author
+        =t('common.author')
+        ': &nbsp;
+        = post.user.name
       section.post-tags
         = raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ')    
     

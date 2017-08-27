@@ -31,6 +31,7 @@ by:
     resend_confirmation: 'Aдправіць пацвярджэнне'
     resend: 'Aдправіць'
     name: 'Iмя'
+    author: 'Аўтар'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'

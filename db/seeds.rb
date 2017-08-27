@@ -9,7 +9,7 @@
 18.times do
 	Post.create(
 		title: Faker::Lovecraft.sentence(3, 1),
-    preview: Faker::Lovecraft.paragraph + Faker::SlackEmoji.emoji,
+    preview: Faker::Lovecraft.paragraph,
     body: Faker::Lovecraft.paragraph(4),
     created_at: Faker::Date.backward(14),
     category_id: Faker::Number.between(1, Category.count),

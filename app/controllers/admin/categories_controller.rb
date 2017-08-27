@@ -1,6 +1,10 @@
-class Admin::CategoriesController < Admin::AdminController
+class CategoriesController < ApplicationController
   
-  before_action :set_category, only: [:edit, :update, :destroy]
+  before_action :set_category, only: [:edit, :update, :destroy, :show]
+
+  def show
+    @posts = Post.where(category_id: [@category.subtree_ids]).paginate(page: params[:page], per_page: 5)
+  end
 
   def index
   	@categories = Category.all
@@ -14,7 +18,7 @@ class Admin::CategoriesController < Admin::AdminController
   def create
   	@category = Category.new(category_params)
   	if @category.save
-      redirect_to admin_categories_path
+      redirect_to categories_path
     else
       @categories = Category.all.order(:name)
     	render :new
@@ -27,7 +31,7 @@ class Admin::CategoriesController < Admin::AdminController
 
   def update
    	if @category.update_attributes(category_params)
-   	  redirect_to admin_categories_path
+   	  redirect_to categories_path
     else
       @categories = Category.where("id != #{@category}").order(:name)
       render :edit
