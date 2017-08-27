@@ -9,6 +9,7 @@ by:
       tags_cloud: 'Воблака тэгаў'
       users: 'Карыстачы'
       nil_name: 'Запоўніце профіль, каб атрымаць доступ да ўсіх функцый блога.'
+      my_posts: 'Мае запiсы'
   common:
     errors: 'Адбылася памылка'
     success: 'Артыкул захаваны'
@@ -19,6 +20,8 @@ by:
     confirm: 'Вы ўпэўнены?'
     password: 'Пароль '
     password_confirmation: 'Паўтарыце пароль'
+    current_password: 'Сучасны пароль'
+    new_password: 'Новы пароль'
     profile: 'Профiль'
     settings: 'Настройки'
     categories: 'Катэгорыi'
@@ -32,6 +35,8 @@ by:
     resend: 'Aдправіць'
     name: 'Iмя'
     author: 'Аўтар'
+    cancel_account: 'Удалiць аккаунт'
+    settings_user: 'Рэдагаванне профілю'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
@@ -56,13 +61,15 @@ by:
         title: 'Новы артыкул'
       edit: 
         title: 'Змяненне артыкула'
+  users:
+      show: 
+        posts_by_author: 'Артыкулы ад аўтара '
   categories:    
     show:
       category: 'Артыкулы з катэгорыей: '
   devise:
     sessions:
       new:
-        log_in: 'Уваход'
         remember_me: 'Запомніць мяне'  
     passwords:
       new:

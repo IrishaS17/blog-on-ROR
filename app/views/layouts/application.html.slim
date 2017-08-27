@@ -56,12 +56,15 @@ html
                     =current_user.name 
                   end 
                 .dropdown-menu[aria-labelledby="navbarDropdownUserLink"]
-                  =link_to t('common.profile'), destroy_user_session_path, method: :delete, class: "dropdown-item"
-                    /=icon('user', class: 'fa-fw')
-                  =link_to t('common.settings'), destroy_user_session_path, method: :delete, class: "dropdown-item"
-                    /=icon('cog', class: 'fa-fw')
-                  =link_to t('.exit'), destroy_user_session_path, method: :delete, class: "dropdown-item"
-                    /=icon('sign-out ', class: 'fa-fw')
+                  =link_to destroy_user_session_path, method: :delete, class: "dropdown-item"
+                    =icon('pencil', class: 'fa-fw')
+                    =t('.my_posts')
+                  =link_to edit_user_registration_path, class: "dropdown-item"
+                    =icon('cog', class: 'fa-fw')
+                    =t('common.settings')
+                  =link_to destroy_user_session_path, method: :delete, class: "dropdown-item"
+                    =icon('sign-out ', class: 'fa-fw')
+                    =t('.exit')
             -else
               li.nav-item
                 =link_to t('common.log_in'), new_user_session_path, {:class=>"btn btn-outline-primary pul-xs-right"}

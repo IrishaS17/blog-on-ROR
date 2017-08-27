@@ -12,6 +12,8 @@
     = p.label :category_id
     br
     = p.collection_select :category_id, Category.order(:name), :id, :name, { class: "form-control" }
+    a.btn.btn-sucsess href= new_category_path
+      =icon('plus-square-o', class: 'fa-2x')
     / {multiple: true} 
   .form-group.emoji-picker-container
     = p.label :preview 

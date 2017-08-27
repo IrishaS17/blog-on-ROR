@@ -38,6 +38,7 @@ en:
       language: 'Language' 
       tags_cloud: 'Tags cloud'
       nil_name: 'Fill in the profile to access the features of the blog.'
+      my_posts: 'My posts'
   common:
     errors: 'Errors'
     success: 'Post saved'
@@ -51,6 +52,12 @@ en:
     resend: 'Resend'
     name: 'Name'
     author: 'Author'
+    current_password: 'Enter current password'
+    new_password: 'Enter new password'
+    password_confirmation: 'Password confirmation'
+    password: 'Password'
+    cancel_account: 'Cancel my account'
+    settings_user: 'Edit user'
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'
@@ -62,6 +69,9 @@ en:
       title: 'New post'
     edit: 
       title: 'Edit post'
+  users:
+      show: 
+        posts_by_author: 'Posts by author '
   tags:
     show:
       tag: 'Posts with tag: '
@@ -74,7 +84,15 @@ en:
       title: 'Edit catecgory'
     show:
       category: 'Posts whith category: '
-  
+  devise:
+    sessions:
+      new:
+        remember_me: 'Remember me'  
+    passwords:
+      new:
+        reset_password: 'Reset password'
+      edit: 
+        change_password: 'Change password'
       
     
   

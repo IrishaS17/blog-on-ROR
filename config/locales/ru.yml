@@ -9,6 +9,7 @@ ru:
       tags_cloud: 'Облако тэгов' 
       users: 'Пользователи'
       nil_name: 'Заполните профиль, чтобы получить доступ ко всем функциям блога.'
+      my_posts: 'Мои посты'
   common:
     errors: 'Произошла ошибка'
     success: 'Сатья сохранена'
@@ -19,6 +20,8 @@ ru:
     confirm: 'Вы уверены?'
     password: 'Пароль '
     password_confirmation: 'Повторите пароль'
+    current_password: 'Текущий пароль'
+    new_password: 'Новый пароль'
     profile: 'Профиль'
     settings: 'Настройки'
     categories: 'Категории'
@@ -32,12 +35,17 @@ ru:
     resend: 'Отправить'
     name: 'Имя'
     author: 'Автор'
+    cancel_account: 'Удалить аккаунт'
+    settings_user: 'Настройки профиля'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
   posts:
     index:
       title: 'Сатьи'
+  users:
+      show: 
+        posts_by_author: 'Статьи от автора '
   tags:
     show:
       tag: 'Статьи с тэгом: '
@@ -62,7 +70,6 @@ ru:
   devise:
     sessions:
       new:
-        log_in: 'Авторизация'
         remember_me: 'Запомнить меня'  
     passwords:
       new:

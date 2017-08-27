@@ -33,7 +33,7 @@
       section.post-author
         =t('common.author')
         ': &nbsp;
-        = post.user.name
+        =link_to post.user.name, post.user 
       section.post-tags
         = raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ')    
     
