@@ -5,15 +5,15 @@ Rails.application.routes.draw do
   scope "/:locale" do
     devise_for :users, :controllers => { registrations: 'registrations' }
     root 'posts#index'
-    resources :posts, except: [:destroy]
+    resources :posts
     resources :users
     resources :tags, only: [:show]
     resources :categories
+    #resources :pictures
 
     namespace :admin do
-      resources :posts, only: [:destroy, :update, :index]
+  
       resources :pictures, only: [:create, :destroy]
-
     end
   end
   

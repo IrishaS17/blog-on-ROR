@@ -7,10 +7,10 @@ by:
       language: 'Мова' 
       exit: 'Выйсцi'
       tags_cloud: 'Воблака тэгаў'
-      users: 'Карыстачы'
       nil_name: 'Запоўніце профіль, каб атрымаць доступ да ўсіх функцый блога.'
       my_posts: 'Мае запiсы'
   common:
+    users: 'Карыстальнiкi'
     errors: 'Адбылася памылка'
     success: 'Артыкул захаваны'
     back: 'Назад'
@@ -39,6 +39,8 @@ by:
     settings_user: 'Рэдагаванне профілю'
     title: 'Артыкулы'
     not_result: 'Вынік па вашаму запыту не знойдзен.'
+    sex: 'Вы: '
+    avatar: 'Загрузiце фотоздымак'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'

@@ -9,10 +9,10 @@ article.post
           -if current_user.name == @post.user.name 
             a.btn.btn-danger href= edit_post_path(@post)
               =icon('pencil', class: 'fa-lg')
-            =link_to admin_post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
+            =link_to post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
               =icon('trash-o', class: 'fa-lg')
           -elsif current_user.admin?
-            =link_to admin_post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
+            =link_to post_path(@post), method: :delete, data: {confirm: t('common.confirm')}, class: "btn btn-back" 
               =icon('trash-o', class: 'fa-lg')
           end
       end        

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-  	#render text: @users.each { |i| "#{i.name}".join("</br>")}
+    @users = User.all.paginate(:page => params[:page], :per_page => 5)
+    #@amount_of_posts = @users.posts.count
   end
 
   def create

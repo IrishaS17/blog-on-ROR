@@ -6,7 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-18.times do
+
+#admin = User.create(
+#    :name => "Admin",
+#    :email => "admin@gmail.com"
+#    :admin => true
+#    :password => "000000"
+#)
+
+#admin.save!
+
+20.times do
 	Post.create(
 		title: Faker::Lovecraft.sentence(3, 1),
     preview: Faker::Lovecraft.paragraph,
@@ -17,14 +27,14 @@
 	)
 end
 
-10.times do
+15.times do
   Tag.create(
     name: Faker::Lovecraft.word,
     created_at: Faker::Date.backward(14)
   )
 end
 
-21.times do
+32.times do
   Tagging.create(
 	  tag_id: Faker::Number.between(1, Tag.count),
 	  post_id: Faker::Number.between(1, Post.count),

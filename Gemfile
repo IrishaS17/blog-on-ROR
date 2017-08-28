@@ -22,6 +22,7 @@ gem 'faker', '~> 1.8', '>= 1.8.4'
 gem 'rails_emoji_picker'
 gem 'devise'
 gem 'letter_opener', :group => :development
+gem 'cancancan', '~> 2.0'
 #gem 'rails-ajax'
 #gem "breadcrumbs_on_rails"
 

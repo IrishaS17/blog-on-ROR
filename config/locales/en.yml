@@ -40,6 +40,7 @@ en:
       nil_name: 'Fill in the profile to access the features of the blog.'
       my_posts: 'My posts'
   common:
+    users: 'Users'
     errors: 'Errors'
     success: 'Post saved'
     back: 'Back'
@@ -60,6 +61,8 @@ en:
     settings_user: 'Edit user'
     title: 'Posts'
     not_result: "Your search didn't match any results."
+    sex: 'You are: '
+    avatar: 'Upload your photo'
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'

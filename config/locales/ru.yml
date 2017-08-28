@@ -7,10 +7,10 @@ ru:
       language: 'Язык'
       exit: 'Выход'
       tags_cloud: 'Облако тэгов' 
-      users: 'Пользователи'
       nil_name: 'Заполните профиль, чтобы получить доступ ко всем функциям блога.'
       my_posts: 'Мои посты'
   common:
+    users: 'Пользователи'
     errors: 'Произошла ошибка'
     success: 'Сатья сохранена'
     back: 'Назад'
@@ -39,6 +39,8 @@ ru:
     settings_user: 'Настройки профиля'
     title: 'Сатьи'
     not_result: 'Результат по вашему запросу не найден.'
+    sex: 'Вы: '
+    avatar: 'Загрузите фото'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'

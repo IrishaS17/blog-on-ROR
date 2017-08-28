@@ -1,3 +1,12 @@
-h1 Пользователи
-== @users.each do |user|
-  h2 = user.email
+-if @users.any?
+  h1 = t('common.users')
+  br
+  -@users.each do |user|
+	= render :partial => "users/show", :locals => {:user => user} 
+  end
+  =will_paginate @users, :renderer => BootstrapPaginationHelper::LinkRenderer
+-else
+  h1 =t('common.no_users_registered')
+  .form-group
+    =link_to t('common.back'), :back, { :class=>"btn btn-back" }
+end

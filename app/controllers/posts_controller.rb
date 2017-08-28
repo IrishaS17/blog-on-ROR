@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_post, only: [:show, :edit, :update]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
  
   def index
     if params[:search]
@@ -15,7 +15,8 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params) #стронг параметрс - фильтрация параметров, которые мы получаем
+    #@post = Post.new(post_params)
+    @post = current_user.posts.new(post_params) #стронг параметрс - фильтрация параметров, которые мы получаем
     if @post.save
       redirect_to @post #если сохранилось перенаправляем на созданный пост
     else
@@ -37,6 +38,11 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path #вывод всех статей
   end
 
   private
