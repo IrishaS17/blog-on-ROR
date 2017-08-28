@@ -3,10 +3,15 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update]
  
   def index
-    @posts = Post.paginate(:page => params[:page], per_page: 5)
+    if params[:search]
+      @posts = Post.where('title LIKE ?', "%#{params[:search]}%").order(created_at: :asc).paginate(:page => params[:page], per_page: 5)
+    else
+      @posts = Post.order(created_at: :desc).paginate(:page => params[:page], per_page: 5)
+    end
   end
 
   def show
+  
   end
   
   def create

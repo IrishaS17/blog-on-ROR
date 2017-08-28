@@ -58,13 +58,13 @@ en:
     password: 'Password'
     cancel_account: 'Cancel my account'
     settings_user: 'Edit user'
+    title: 'Posts'
+    not_result: "Your search didn't match any results."
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'
     #receive_unlock: 'Didn't receive unlock instructions?'
   posts:
-    index:
-      title: 'Posts'
     new:
       title: 'New post'
     edit: 

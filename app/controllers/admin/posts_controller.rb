@@ -26,4 +26,4 @@ class Admin::PostsController < AdminController
      @post = Post.find(params[:id])
     end
 end
-#не работает удаление, попробуй решить с помощью cancancan
+

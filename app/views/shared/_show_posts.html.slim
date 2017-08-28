@@ -17,10 +17,10 @@ article.post
           end
       end        
     small
-      time = @post.created_at.to_date.strftime("%d, %B, %Y")
-        |&nbsp; |&nbsp;
+      time = @post.created_at.to_date.strftime("%d, %B, %Y") 
+      |&nbsp;
       '|
-      = @post.user.name
+      =link_to @post.user.name, @post.user 
   section.post-preview
     = content_with_emoji(@post.preview)  
   section.post-body

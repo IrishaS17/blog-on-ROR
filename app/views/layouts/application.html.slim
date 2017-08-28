@@ -26,8 +26,6 @@ html
               li.nav-item class= active_link(categories_path)
                 =link_to t('common.categories'), categories_path, {:class=>"nav-link"} 
             end
-            li.nav-item class= active_link(posts_path)
-              =link_to t('.followers'), posts_path, {:class=>"nav-link"}
             li.nav-item.dropdown
               a#navbarDropdownMenuLink.nav-link.dropdown-toggle[data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
                 =t('.language')
@@ -56,9 +54,6 @@ html
                     =current_user.name 
                   end 
                 .dropdown-menu[aria-labelledby="navbarDropdownUserLink"]
-                  =link_to destroy_user_session_path, method: :delete, class: "dropdown-item"
-                    =icon('pencil', class: 'fa-fw')
-                    =t('.my_posts')
                   =link_to edit_user_registration_path, class: "dropdown-item"
                     =icon('cog', class: 'fa-fw')
                     =t('common.settings')
@@ -87,11 +82,13 @@ html
           end
           =yield 
         div.col-md-3
-          .input-group
-            input.form-control.search[placeholder="Search" type="text"]
+          
+          =form_tag(posts_path, method: "get", class: "input-group") do
+            input.form-control.search[placeholder="Search" type="text" name="search"]
             span class="input-group-btn"
-              button class="btn btn-secondary btn-outline-primary" type="button" 
+              button class="btn btn-secondary btn-outline-primary" type="submit" 
                 =icon('search', class: 'fa-lg search') 
+          end
           =render 'shared/submenu'
           div.tag_cloud
             /h2 =t('.tags_cloud')

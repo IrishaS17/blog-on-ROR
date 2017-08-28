@@ -4,6 +4,7 @@
     ul
       - @post.errors.full_messages.each do |message|
        li = message
+
 = form_for @post, html: {multipart: true} do |p|
   .form-group
     = p.label :title
@@ -30,7 +31,12 @@
     br
     = p.text_field  :all_tags, {:class => "form-control"}
     /'data-role' =>'tagsinput'
-    =p.text_field :user_id, value: current_user.id, class: "hidden"
+    
+    -if @post.user_id
+      =p.text_field :user_id, value: @post.user_id, class: "hidden"
+    else
+      =p.text_field :user_id, value: current_user.id, class: "hidden"
+    end
   
   .form-group
     input.btn.btn-primary type="submit" value = t('common.save') 

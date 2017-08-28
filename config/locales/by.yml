@@ -37,12 +37,11 @@ by:
     author: 'Аўтар'
     cancel_account: 'Удалiць аккаунт'
     settings_user: 'Рэдагаванне профілю'
+    title: 'Артыкулы'
+    not_result: 'Вынік па вашаму запыту не знойдзен.'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
-  posts:
-    index:
-      title: 'Артыкулы'
   tags:
     show:
       tag: 'Артыкулы з тэгам: '

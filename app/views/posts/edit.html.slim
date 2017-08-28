@@ -1,2 +1,6 @@
-h1 =t('.title')
-= render 'form'
+-if @post.user_id == current_user.id
+	h1 =t('common.title')
+	= render 'form'
+-else
+    =render 'shared/error_page'
+end

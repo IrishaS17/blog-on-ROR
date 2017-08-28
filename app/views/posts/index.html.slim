@@ -1,4 +1,11 @@
-  h1 = t('.title')
+-if @posts.any?
+  h1 = t('common.title')
   =render @posts
   =will_paginate @posts, :renderer => BootstrapPaginationHelper::LinkRenderer
-  script#dsq-count-scr type="javascript" src="//blogdevsimple.disqus.com/count.js" async
+-else
+  h1 =t('common.not_result')
+  .form-group
+    =link_to t('common.back'), :back, { :class=>"btn btn-back" }
+end
+
+script#dsq-count-scr type="javascript" src="//blogdevsimple.disqus.com/count.js" async

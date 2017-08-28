@@ -37,12 +37,11 @@ ru:
     author: 'Автор'
     cancel_account: 'Удалить аккаунт'
     settings_user: 'Настройки профиля'
+    title: 'Сатьи'
+    not_result: 'Результат по вашему запросу не найден.'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'
-  posts:
-    index:
-      title: 'Сатьи'
   users:
       show: 
         posts_by_author: 'Статьи от автора '
