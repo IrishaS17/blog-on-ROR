@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#admin = User.create(
-#    :name => "Admin",
-#    :email => "admin@gmail.com"
-#    :admin => true
-#    :password => "000000"
-#)
+admin = User.create(
+    :name => "Admin",
+    :email => "admin@gmail.com"
+    :admin => true
+    :password => "000000"
+)
 
-#admin.save!
+admin.save!
 
 20.times do
 	Post.create(
