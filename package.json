@@ -1,5 +1,8 @@
 {
-  "name": "a",
+  "name": "irish-blog",
+  "description": "A simple blog on ruby on rails."
+  "version": "0.0.1",
   "private": true,
+  "keywords": ["ruby", "rails"],
   "dependencies": {}
 }
