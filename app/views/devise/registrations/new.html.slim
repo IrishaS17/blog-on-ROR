@@ -7,16 +7,7 @@ h2 =t('common.sign_up')
     span.input-group-addon.btn-outline-primary
       =icon('user-o', class: 'fa-fw') 
     = f.text_field :name, autofocus: true, class: "form-control", placeholder: t('common.name')
-  br
-  
-  /div.form-check
-    = f.label t('common.sex')
-    br
-    = f.radio_button :sex, "male", checked: true
-    = icon('male', class: 'fa-fw')  
-    |&nbsp; &nbsp;
-    = f.radio_button :sex, "female"
-    = icon('female', class: 'fa-fw')  
+  br  
 
   div.input-group
     span.input-group-addon.btn-outline-primary
