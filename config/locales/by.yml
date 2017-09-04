@@ -42,6 +42,7 @@ by:
     sex: 'Вы: '
     avatar: 'Загрузiце фотоздымак'
     posts_count: 'Артыкулаў: '
+    no_users_registered: 'Няма зарэгістраваных карыстальнікаў'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'

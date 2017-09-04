@@ -42,6 +42,7 @@ ru:
     sex: 'Вы: '
     avatar: 'Загрузите фото'
     posts_count: 'Всего постов: '
+    no_users_registered: 'Нет зарегистрированных пользователей.'
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'

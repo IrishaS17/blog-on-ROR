@@ -64,6 +64,7 @@ en:
     sex: 'You are: '
     avatar: 'Upload your photo'
     posts_count: 'Posts: '
+    no_users_registered: 'No users registered'
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'

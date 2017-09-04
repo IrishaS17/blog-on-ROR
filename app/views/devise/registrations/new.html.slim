@@ -1,32 +1,32 @@
 h2 =t('common.sign_up')
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+=form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
   = devise_error_messages!
 
   div.input-group
     span.input-group-addon.btn-outline-primary
       =icon('user-o', class: 'fa-fw') 
-    = f.text_field :name, autofocus: true, class: "form-control", placeholder: t('common.name')
+    =f.text_field :name, autofocus: true, class: "form-control", placeholder: t('common.name')
   br  
 
   div.input-group
     span.input-group-addon.btn-outline-primary
       =icon('envelope-o', class: 'fa-fw') 
-    = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"
+    =f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"
   br
   div.input-group
     span.input-group-addon.btn-outline-primary
       =icon('key', class: 'fa-fw') 
-    = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('common.password')
+    =f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('common.password')
   br
   div.input-group
     span.input-group-addon.btn-outline-primary
       =icon('key', class: 'fa-fw') 
-    = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('common.password_confirmation')
+    =f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('common.password_confirmation')
   br
   div.actions
-    = f.submit t('common.sign_up'), class: "btn btn-primary" 
+    =f.submit t('common.sign_up'), class: "btn btn-primary" 
   
 end
 
-= render "devise/shared/links"
+=render "devise/shared/links"
