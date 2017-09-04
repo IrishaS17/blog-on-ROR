@@ -9,7 +9,7 @@ window.onload = ->
       textColour: null
       maxSpeed: 0.05
       outlineMethod: 'colour'
-      outlineColour: 'green'
+      outlineColour: '#0275d8'
       shuffleTags: true
     TagCanvas.Start 'myCanvas', '', options
   catch e
