@@ -1,0 +1,13 @@
+    div.row
+      div.col-md-10
+        article.profile-card
+          section.profile-content
+            /=image_tag user.image.url(:thumb), class: 'img-show' 
+            h1 = user.name
+            small
+              time = user.created_at.to_date.strftime("%d, %B, %Y")  
+            .right-block
+              =t('common.posts_count') 
+              =user.posts.count
+    br       
+         

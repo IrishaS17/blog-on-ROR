@@ -63,6 +63,7 @@ en:
     not_result: "Your search didn't match any results."
     sex: 'You are: '
     avatar: 'Upload your photo'
+    posts_count: 'Posts: '
     #resend_confirmation: 'Resend confirmation instructions'
     #forgot_password: 'Forgot your password?'
     #receive_confirmation: 'Didn't receive confirmation instructions?'

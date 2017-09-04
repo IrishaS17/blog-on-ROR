@@ -3,5 +3,6 @@ h1 =t('.posts_by_author') + @users.name
   h2 Posts is empty
 else
   =render @users.posts
+  
 end
 /=will_paginate @posts, :renderer => BootstrapPaginationHelper::LinkRenderer

@@ -41,6 +41,7 @@ ru:
     not_result: 'Результат по вашему запросу не найден.'
     sex: 'Вы: '
     avatar: 'Загрузите фото'
+    posts_count: 'Всего постов: '
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далее &rarr;'

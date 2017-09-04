@@ -2,27 +2,13 @@ h2
   =t('common.settings_user')
 br
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| 
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true, method: :put }) do |f| 
   = devise_error_messages!
 
   
   -if devise_mapping.confirmable? && resource.pending_reconfirmation? 
     div 'Currently waiting confirmation for: = resource.unconfirmed_email 
   end 
-  
-  div.form-check
-    = f.label t('common.sex')
-    br
-    = f.radio_button :sex, "male", checked: true
-    = icon('male', class: 'fa-fw')  
-    |&nbsp; &nbsp;
-    = f.radio_button :sex, "female"
-    = icon('female', class: 'fa-fw') 
-
-  div.form-group
-    = f.label t('common.avatar')
-    br
-    = f.file_field :image 
 
   div.form-group
     = f.label :email

@@ -2,7 +2,7 @@
   h1 = t('common.users')
   br
   -@users.each do |user|
-	= render :partial => "users/show", :locals => {:user => user} 
+	= render :partial => "/shared/show_users", :locals => {:user => user} 
   end
   =will_paginate @users, :renderer => BootstrapPaginationHelper::LinkRenderer
 -else

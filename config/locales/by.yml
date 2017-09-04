@@ -41,6 +41,7 @@ by:
     not_result: 'Вынік па вашаму запыту не знойдзен.'
     sex: 'Вы: '
     avatar: 'Загрузiце фотоздымак'
+    posts_count: 'Артыкулаў: '
   will_paginate:
     previous_label: '&larr; Назад '
     next_label: 'Далей &rarr;'
