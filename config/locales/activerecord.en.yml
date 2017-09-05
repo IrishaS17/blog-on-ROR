@@ -3,3 +3,11 @@ en:
     attributes: 
       post:
         image: 'Input file'
+    errors: 
+      models:
+        user:
+          attributes:
+            name:
+              taken: 'Wrong name!' 
+            email:
+              taken: 'Wrong email!'
