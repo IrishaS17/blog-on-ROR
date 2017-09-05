@@ -62,7 +62,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "a_#{Rails.env}"
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { :host => "https://irish-blog.herokuapp.com" }
-
+  config.action_mailer.delivery_method = :sendmail 
+  
+  config.action_mailer.raise_delivery_errors = true
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -89,9 +91,20 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
-  config.action_mailer.delivery_method = :letter_opener
-  ActionMailer::Base.perform_deliveries = true
-  ActionMailer::Base.raise_delivery_errors = true
-  
+  config.active_record.dump_schema_after_migration = 
+
+  config.action_mailer.delivery_method = :stmp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_options = { from: 'support@irishblog.com' }
+  config.action_mailer.default_url_options = { :host => 'www.irish-blog.herokuapp.com' }
+  config.action_mailer.smtp_settings = {
+        :address        => 'smtp.gmail.com',
+        :domain         => 'gmail.com',
+        :port           => 587,
+        :user_name      => '373601logist@gmail.com'
+        :password       => '373601373601',
+        :authentication => :plain
+        :enable_starttls_auto => true
+  }
+  config.action_mailer.raise_delivery_errors = true
 end

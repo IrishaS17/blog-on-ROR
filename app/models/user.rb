@@ -5,7 +5,7 @@ class User < ApplicationRecord
   #validates :sex, presence: true
   #mount_uploader :image, ImageUploader
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :confirmable, :validatable
+         :recoverable, :rememberable, :validatable
 
   has_many :posts, dependent: :destroy 
 end
