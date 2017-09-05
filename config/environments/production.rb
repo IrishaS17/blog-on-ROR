@@ -91,20 +91,21 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = 
+  config.active_record.dump_schema_after_migration = falses
 
-  config.action_mailer.delivery_method = :stmp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_options = { from: 'support@irishblog.com' }
-  config.action_mailer.default_url_options = { :host => 'www.irish-blog.herokuapp.com' }
-  config.action_mailer.smtp_settings = {
-        :address        => 'smtp.gmail.com',
-        :domain         => 'gmail.com',
-        :port           => 587,
-        :user_name      => '373601logist@gmail.com'
-        :password       => '373601373601',
-        :authentication => :plain
-        :enable_starttls_auto => true
-  }
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.default_options = { from: '373601logist@gmail.com' }
+    config.action_mailer.default_url_options = { :host => 'www.irish-blog.herokuapp.com' }
+    config.action_mailer.smtp_settings = {
+          :address        => 'smtp.gmail.com',
+          :domain         => 'gmail.com',
+          :port           => 587,
+          :user_name      => '373601logist@gmail.com',
+          :password       => "373601373601",
+          :authentication => :plain,
+          :enable_starttls_auto => true
+    }
+  
 end
