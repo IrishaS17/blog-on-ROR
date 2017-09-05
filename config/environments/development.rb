@@ -55,14 +55,14 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.default_options = { from: 'support@irishblog.com' }
-    config.action_mailer.default_url_options = { :host => 'https://irish-blog.herokuapp.com/en/' }
+    config.action_mailer.default_options = { from: '373601logist@gmail.com' }
+    config.action_mailer.default_url_options = { :host => 'https://irish-blog.herokuapp.com/' }
     config.action_mailer.smtp_settings = {
-          :address        => 'smtp.gmail.com',
-          :domain         => 'irish-blog.herokuapp.com',
+         :address        => 'smtp.gmail.com',
+          :domain         => 'gmail.com',
           :port           => 587,
-          :user_name      => 'irishaapple@gmail.com',
-          :password       => 'lovemeandfuckyou',
+          :user_name      => '373601logist@gmail.com',
+          :password       => "373601373601",
           :authentication => :plain,
           :enable_starttls_auto => true
     }

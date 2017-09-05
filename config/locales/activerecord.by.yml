@@ -16,10 +16,4 @@ by:
   errors:
     messages: 
       blank: 'не можа быть пустым'
-    models:
-      user:
-        attributes:
-            name:
-              taken: 'Няправільнае імя!' 
-            email:
-              taken: 'Няправільны email, магчыма карыстальнік з такім email ужо існуе.'
+    

@@ -136,3 +136,10 @@ ru:
         many: "%{resource}: сохранение не удалось из-за %{count} ошибок:"
         one: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
+    models:
+      user:
+        attributes:
+          name:
+            taken: 'Неверное имя!' 
+          email:
+            taken: 'Неверный email, возможно пользователь с таким email уже существует.'

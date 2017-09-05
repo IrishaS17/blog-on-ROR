@@ -136,3 +136,10 @@ be:
         many: "%{resource}: захаванне не атрымалася з-за %{count} памылак:"
         one: "%{resource}: захаванне не атрымалася з-за %{count} памылкі:"
         other: "%{resource}: захаванне не атрымалася з-за %{count} памылкі:"
+    models:
+      user:
+        attributes:
+          name:
+            taken: 'Няправільнае імя!' 
+          email:
+            taken: 'Няправільны email, магчыма карыстальнік з такім email ужо існуе.'

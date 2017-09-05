@@ -16,10 +16,4 @@ ru:
   errors:
     messages: 
       blank: 'не может быть пустым'
-    models:
-      user:
-        attributes:
-            name:
-              taken: 'Неверное имя!' 
-            email:
-              taken: 'Неверный email, возможно пользователь с таким email уже существует.'
+    
