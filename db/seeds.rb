@@ -16,31 +16,31 @@ admin = User.create(
 
 admin.save!
 
-20.times do
-	Post.create(
-		title: Faker::Lovecraft.sentence(3, 1),
-    preview: Faker::Lovecraft.paragraph,
-    body: Faker::Lovecraft.paragraph(4),
-    created_at: Faker::Date.backward(14),
-    category_id: Faker::Number.between(1, Category.count),
-    user_id: Faker::Number.between(1, User.count)
-	)
-end
+#0.times do
+#	Post.create(
+#		title: Faker::Lovecraft.sentence(3, 1),
+#   preview: Faker::Lovecraft.paragraph,
+#    body: Faker::Lovecraft.paragraph(4),
+#    created_at: Faker::Date.backward(14),
+#    category_id: Faker::Number.between(1, Category.count),
+#    user_id: Faker::Number.between(1, User.count)
+#	)
+#end
 
-15.times do
-  Tag.create(
-    name: Faker::Lovecraft.word,
-    created_at: Faker::Date.backward(14)
-  )
-end
+#15.times do
+#  Tag.create(
+#    name: Faker::Lovecraft.word,
+#    created_at: Faker::Date.backward(14)
+#  )
+#end
 
-32.times do
-  Tagging.create(
-	  tag_id: Faker::Number.between(1, Tag.count),
-	  post_id: Faker::Number.between(1, Post.count),
-	  created_at: Faker::Date.backward(14)
-  )
-end
+#32.times do
+#  Tagging.create(
+#	  tag_id: Faker::Number.between(1, Tag.count),
+#	  post_id: Faker::Number.between(1, Post.count),
+#	  created_at: Faker::Date.backward(14)
+#  )
+#end
 
 
 
