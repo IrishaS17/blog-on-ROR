@@ -9,8 +9,8 @@
 
 admin = User.create(
     :name => "Admin",
-    :email => "admin@gmail.com"
-    :admin => true
+    :email => "admin@gmail.com",
+    :admin => true,
     :password => "000000"
 )
 
