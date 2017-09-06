@@ -70,6 +70,8 @@ ru:
   categories:
     show:
       category: 'Статьи с категорией: '
+    index:
+      new_category: 'Новая категория'
   devise:
     sessions:
       new:
