@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-=begin
   admin = User.create(
     :name => "Admin",
     :email => "irishaapple@gmail.com",
@@ -17,7 +16,6 @@
 
 admin.save!
 
-
 5.times do 
   Category.create(
     name: Faker::Lovecraft.word,
@@ -25,16 +23,16 @@ admin.save!
   )
 end
 
-5.times do 
+3.times do 
   Category.create(
     name: Faker::Lovecraft.word,
     created_at: Faker::Date.backward,
     ancestry: Faker::Number.between(1, Category.count)
   )
 end
-=end
 
-20.times do
+
+15.times do
 	Post.create(
 		title: Faker::Lovecraft.sentence(3, 1),
     preview: Faker::Lovecraft.paragraph,
@@ -45,14 +43,14 @@ end
 	)
 end
 
-15.times do
+25.times do
   Tag.create(
     name: Faker::Lovecraft.word,
     created_at: Faker::Date.backward(14)
   )
 end
 
-32.times do
+37.times do
   Tagging.create(
 	  tag_id: Faker::Number.between(1, Tag.count),
 	  post_id: Faker::Number.between(1, Post.count),
@@ -63,6 +61,7 @@ end
 
 
 puts "Seed finished"
+puts "#{Category.count} Category created"
 puts "#{Post.count} Posts created"
 puts "#{Tag.count} Tag created"
 puts "#{Tagging.count} Tagging created"

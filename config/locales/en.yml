@@ -36,6 +36,7 @@ en:
       followers: 'Followers'
       write: 'New Post' 
       language: 'Language' 
+      exit: 'Exit'
       tags_cloud: 'Tags cloud'
       nil_name: 'Fill in the profile to access the features of the blog.'
       my_posts: 'My posts'
@@ -59,6 +60,7 @@ en:
     password: 'Password'
     cancel_account: 'Cancel my account'
     settings_user: 'Edit user'
+    settings: 'Settings'
     title: 'Posts'
     not_result: "Your search didn't match any results."
     sex: 'You are: '
