@@ -4,8 +4,6 @@ html
     = csrf_meta_tags 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
     script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"
-    script src="www.goat1000.com/tagcanvas.min.js?2.9"
-    script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0.alpha6/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  
   body
     nav.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
@@ -92,14 +90,7 @@ html
                 =icon('search', class: 'fa-lg search') 
           end
           =render 'shared/submenu'
-          div.tag_cloud
-            /h2 =t('.tags_cloud')
-            div#myCanvasContainer
-              canvas#myCanvas width="300" height="300"
-                ul
-                  - tag_cloud Tag.counts, %w{xs s m l xl} do |tag, css_class|
-                    li 
-                      =link_to tag.name, tag_path(tag.name), class: css_class 
-         
+          =render 'shared/tag_cloud'
+          
            
             

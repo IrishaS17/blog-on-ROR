@@ -20,5 +20,6 @@
 //= require jquery_ujs
 //= require bootstrap.min 
 //= require tagcanvas.min.js
+//= require tether.min.js
 
 
