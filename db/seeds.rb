@@ -16,7 +16,7 @@
 )
 
 admin.save!
-=end
+
 
 5.times do 
   Category.create(
@@ -32,7 +32,7 @@ end
     ancestry: Faker::Number.between(1, Category.count)
   )
 end
-
+=end
 
 20.times do
 	Post.create(
