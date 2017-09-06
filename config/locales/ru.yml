@@ -25,6 +25,7 @@ ru:
     profile: 'Профиль'
     settings: 'Настройки'
     categories: 'Категории'
+    new_category: 'Новая категория'
     sign_up: 'Регистрация'
     log_in: 'Войти'
     registration: 'Зарегистрироваться'
@@ -52,26 +53,20 @@ ru:
   tags:
     show:
       tag: 'Статьи с тэгом: '
-  admin:
-    categories: 
-      index: 
+  categories:
+    index: 
         name: 'Название'
         parent: 'Родитель'
-        action: 'Действия'
-      new:
-        title: 'Новая категория'
-      edit:
-        title: 'Редактирование категории'
-    posts:
-      new:
-        title: 'Новая статья'
-      edit: 
-        title: 'Редактирование сатьи'
-  categories:
+        action: 'Действия'   
+    edit:
+      title: 'Редактирование категории'
     show:
       category: 'Статьи с категорией: '
-    index:
-      new_category: 'Новая категория'
+  posts:
+    new:
+      title: 'Новая статья'
+    edit: 
+      title: 'Редактирование сатьи'
   devise:
     sessions:
       new:

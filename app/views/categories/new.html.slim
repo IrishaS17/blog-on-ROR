@@ -1,2 +1,6 @@
-h1 = t('.title') 
-= render 'form'  
+-if user_signed_in? 
+  h1 = t('common.new_category') 
+  = render 'form'  
+-else
+  =render 'shared/error_page'
+end

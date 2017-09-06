@@ -34,6 +34,7 @@ by:
     resend_confirmation: 'Aдправіць пацвярджэнне'
     resend: 'Aдправіць'
     name: 'Iмя'
+    new_category: 'Новая катэгорыя'
     author: 'Аўтар'
     cancel_account: 'Удалiць аккаунт'
     settings_user: 'Рэдагаванне профілю'
@@ -49,21 +50,18 @@ by:
   tags:
     show:
       tag: 'Артыкулы з тэгам: '
-  admin:
-    categories: 
-      index: 
-        name: 'Назва'
-        parent: 'Галоўная катэгорыя'
-        action: 'Дзеянні'
-      new:
-        title: 'Новая катэгорыя'
-      edit:
-        title: 'Змяненне катэгорыi'
-    posts:
-      new:
-        title: 'Новы артыкул'
-      edit: 
-        title: 'Змяненне артыкула'
+  categories: 
+    index: 
+      name: 'Назва'
+      parent: 'Галоўная катэгорыя'
+      action: 'Дзеянні'
+    edit:
+      title: 'Змяненне катэгорыi'
+  posts:
+    new:
+      title: 'Новы артыкул'
+    edit: 
+      title: 'Змяненне артыкула'
   users:
       show: 
         posts_by_author: 'Артыкулы ад аўтара '
