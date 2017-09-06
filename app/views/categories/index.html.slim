@@ -10,7 +10,7 @@ section#categories
       	th id
       	th =t('.name')
         th =t('.parent')
-        -if current_user.admin?
+        -if user_signed_in? && current_user.admin?
       	  th colspan=2  =t('.action')
         end
     tbody
@@ -19,7 +19,7 @@ section#categories
           td =index+1
           td =category.name
           td =category.parent.name if category.parent.present?
-          -if current_user.admin?
+          -if user_signed_in? && current_user.admin?
             td =link_to 'Edit', edit_category_path(category), class: 'btn btn-outline-primary btn-sm'
             td
               =link_to 'Delete', category_path(category), method: :delete, data: {confirm: t('common.confirm') }, class: 'btn btn-outline-danger btn-sm'
