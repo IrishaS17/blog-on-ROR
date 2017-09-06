@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-=beginadmin = User.create(
+=begin
+  admin = User.create(
     :name => "Admin",
     :email => "irishaapple@gmail.com",
     :admin => true,
@@ -16,6 +17,21 @@
 
 admin.save!
 =end
+
+5.times do 
+  Category.create(
+    name: Faker::Lovecraft.word,
+    created_at: Faker::Date.backward
+  )
+end
+
+5.times do 
+  Category.create(
+    name: Faker::Lovecraft.word,
+    created_at: Faker::Date.backward,
+    ancestry: Faker::Number.between(1, Category.count)
+  )
+end
 
 
 20.times do
