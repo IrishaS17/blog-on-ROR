@@ -8,6 +8,6 @@ en:
         user:
           attributes:
             name:
-              taken: 'Wrong name!' 
+              taken: 'wrong!' 
             email:
-              taken: 'Wrong email!'
+              taken: 'wrong!'
