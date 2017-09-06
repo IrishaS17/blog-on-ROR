@@ -6,4 +6,7 @@ File upload via carrierwave. Authentication with devise, internationalization, t
 * Ruby version 2.4.0p0;
 * Rails 5.1.3. 
 
+My app on Heroku: https://irish-blog.herokuapp.com
+
+
 
