@@ -8,14 +8,21 @@ div#disqus_thread
 	/};
 	javascript:
 	  var disqus_config = function () {
-	    this.page.url = 'https://lirish-blog.herokuapp.com<%= request.original_fulpath %>';  // request.base.url + request
+	    this.page.url = 'https://irish-blog.herokuapp.com<%= request.original_fulpath %>';  // request.base.url + request
 	    this.page.identifier = '<%= @post.id%>'; 
 	  };
 		(function() { 
 		//DON'T EDIT BELOW THIS LINE
 		var d = document, s = d.createElement('script');
-		s.src = 'https://irishblog-1.disqus.com/embed.js';
+		s.src = 'https://irish-blog.disqus.com/embed.js';
 		s.setAttribute('data-timestamp', +new Date());
 		(d.head || d.body).appendChild(s);
 		})();
+
+noscript 
+  'Please enable JavaScript to view the 
+  a href="https://disqus.com/?ref_noscript" 
+
+
+                            
   

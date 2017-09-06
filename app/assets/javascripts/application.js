@@ -19,7 +19,8 @@
 //= require rails_emoji_picker
 //= require jquery_ujs
 //= require bootstrap.min 
-//= require tagcanvas.min.js
+//= require tagcanvas.min.js 
+//= require excanvas.js
 //= require tether.min.js
 
 
