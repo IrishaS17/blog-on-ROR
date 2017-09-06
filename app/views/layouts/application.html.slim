@@ -4,6 +4,7 @@ html
     = csrf_meta_tags 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
     script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"
+    script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  
   body
     nav.navbar.navbar-inverse.bg-inverse.navbar-toggleable-md
@@ -27,7 +28,7 @@ html
                 =link_to t('common.categories'), categories_path, {:class=>"nav-link"} 
             end
             li.nav-item.dropdown
-              a#navbarDropdownMenuLink.nav-link.dropdown-toggle[data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+              a#navbarDropdownMenuLink.nav-link.dropdown-toggle[data-toggle="dropdown" ]
                 =t('.language')
               .dropdown-menu[aria-labelledby="navbarDropdownMenuLink"]
                 .dropdown-item 
