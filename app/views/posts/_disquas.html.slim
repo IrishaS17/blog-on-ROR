@@ -9,7 +9,7 @@ div#disqus_thread
 	javascript:
 	  var disqus_config = function () {
 	    this.page.url = 'https://irish-blog.herokuapp.com<%= request.original_fulpath %>';  // request.base.url + request
-	    this.page.identifier = '<%= @post.id%>'; 
+	    this.page.identifier = '= @post.id'; 
 	  };
 		(function() { 
 		//DON'T EDIT BELOW THIS LINE
