@@ -1,7 +1,7 @@
     article.post
       section.post-head
         div.row
-          div.col-md-10
+          header.col-md-10.title
             h2 = link_to post.title, post_path(post) 
             small
              = post.created_at.to_date.strftime("%d, %B, %Y") 
