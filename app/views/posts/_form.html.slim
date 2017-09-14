@@ -16,9 +16,9 @@
     a.btn.btn-sucsess href= new_category_path
       =icon('plus-square-o', class: 'fa-2x')
     / {multiple: true} 
-  .form-group.emoji-picker-container
+  div.form-group.emoji-picker-container 
     = p.label :preview 
-    = p.text_field :preview, class: "form-control",  data: { emojiable: true }
+    = p.text_field :preview, class: "form-control", data: { emojiable: true }
   .form-group
     = p.label :body 
     = p.trix_editor :body, class: "editor"

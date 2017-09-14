@@ -14,6 +14,6 @@ window.onload = ->
     TagCanvas.Start 'myCanvas', '', options
   catch e
     # something went wrong, hide the canvas container
-    alert e
+  
     document.getElementById('myCanvasContainer').style.display = 'none'
   return

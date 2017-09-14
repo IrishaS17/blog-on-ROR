@@ -11,19 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-
-//= require turbolinks
 //= require jquery
 //= require trix 
 //= require jquery_ujs
 //= require_tree .
 //= require jquery-ui/widgets/autocomplete
-
-//= require rails_emoji_picker
-
 //= require bootstrap.min 
-//= require tagcanvas.min.js 
 //= require excanvas.js
 //= require tether.min.js
-
+//= require rails_emoji_picker
+//= require tagcanvas.min.js 
 
